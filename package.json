@@ -1,32 +1,58 @@
 {
-  "name": "classical-css-framework",
+  "name": "classic-css",
   "version": "1.0.0",
-  "description": "A beautiful, professional classical CSS framework with advanced components and animations",
-  "main": "classical.css",
-  "style": "classical.css",
+  "description": "Ultra Masterpiece Classical Professional CSS Framework with historical era styles, precious metal themes, and museum-quality animations",
+  "main": "classic.css",
+  "style": "classic.css",
   "files": [
     "*.css",
-    "LICENSE"
+    "*.html",
+    "README.md"
   ],
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"No build process needed for pure CSS framework\"",
+    "demo": "echo \"Open demo.html in your browser\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wecoded-dev/Classic-CSS.git"
+  },
   "keywords": [
     "css",
     "framework",
     "classical",
-    "professional",
     "responsive",
-    "beautiful",
-    "elegant",
+    "design",
+    "components",
     "ui",
-    "components"
+    "frontend",
+    "web-design",
+    "css-framework",
+    "classical-design",
+    "renaissance",
+    "baroque",
+    "historical",
+    "elegant",
+    "professional"
   ],
-  "author": "Hanzla Baig",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/classical-css-framework.git"
+  "author": {
+    "name": "WeCoded Dev",
+    "url": "https://github.com/wecoded-dev"
   },
-  "homepage": "https://YOUR_USERNAME.github.io/classical-css-framework",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/classical-css-framework/issues"
+    "url": "https://github.com/wecoded-dev/Classic-CSS/issues"
+  },
+  "homepage": "https://wecoded-dev.github.io/Classic-CSS/demo.html",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/wecoded-dev"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
