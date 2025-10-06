@@ -1,0 +1,718 @@
+/* buttons.css - Ultra Advanced Classical Professional Button Framework */
+/* Version 3.0 - Masterpiece Button System with Classical Elegance & Modern Power */
+
+:root {
+  /* 🎨 CLASSICAL COLOR PALETTE - Inspired by Historical Eras */
+  --btn-gold-primary: linear-gradient(135deg, #d4af37 0%, #f9e076 30%, #d4af37 70%, #b8941f 100%);
+  --btn-gold-secondary: linear-gradient(135deg, #b8941f 0%, #d4af37 50%, #b8941f 100%);
+  --btn-silver-primary: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 30%, #c0c0c0 70%, #a8a8a8 100%);
+  --btn-silver-secondary: linear-gradient(135deg, #a8a8a8 0%, #c0c0c0 50%, #a8a8a8 100%);
+  --btn-bronze-primary: linear-gradient(135deg, #cd7f32 0%, #e39d55 30%, #cd7f32 70%, #a8662c 100%);
+  --btn-rose-gold: linear-gradient(135deg, #b76e79 0%, #e8c4c4 50%, #b76e79 100%);
+  --btn-platinum: linear-gradient(135deg, #e5e4e2 0%, #f8f8f8 30%, #e5e4e2 70%, #d4d3d2 100%);
+  
+  /* 🏛️ HISTORICAL ERA COLORS */
+  --btn-renaissance: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #8b4513 100%);
+  --btn-baroque: linear-gradient(135deg, #2c1810 0%, #4a3526 50%, #2c1810 100%);
+  --btn-victorian: linear-gradient(135deg, #704214 0%, #8b5a2b 50%, #704214 100%);
+  --btn-art-nouveau: linear-gradient(135deg, #8fbc8f 0%, #98fb98 50%, #8fbc8f 100%);
+  --btn-art-deco: linear-gradient(135deg, #ffd700 0%, #fff8dc 50%, #ffd700 100%);
+  
+  /* 📐 SOPHISTICATED SHADOWS & DEPTH */
+  --btn-shadow-classic: 
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 6px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  
+  --btn-shadow-elegant:
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    0 12px 30px rgba(0, 0, 0, 0.1),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  
+  --btn-shadow-embossed:
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+  
+  --btn-shadow-debossed:
+    inset 0 -2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+  
+  --btn-shadow-glow:
+    0 0 20px rgba(212, 175, 55, 0.4),
+    0 0 40px rgba(212, 175, 55, 0.2),
+    0 0 60px rgba(212, 175, 55, 0.1);
+  
+  /* 🎪 TYPOGRAPHY & TEXT */
+  --btn-font-serif: 'Playfair Display', 'Times New Roman', serif;
+  --btn-font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+  --btn-font-script: 'Dancing Script', cursive;
+  --btn-font-monospace: 'Courier New', monospace;
+  
+  /* 📏 PRECISE DIMENSIONS */
+  --btn-padding-sm: 0.75rem 1.5rem;
+  --btn-padding-md: 1rem 2rem;
+  --btn-padding-lg: 1.25rem 2.5rem;
+  --btn-padding-xl: 1.5rem 3rem;
+  
+  --btn-radius-gentle: 6px;
+  --btn-radius-classic: 8px;
+  --btn-radius-grand: 12px;
+  --btn-radius-ornate: 4px 12px 4px 12px;
+  --btn-radius-pill: 50px;
+  
+  /* 🎭 MASTERPIECE ANIMATIONS */
+  --ease-renaissance: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-baroque: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-neoclassical: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-impressionist: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-victorian: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* 🏛️ BASE BUTTON ARCHITECTURE */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--btn-padding-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+  border-radius: var(--btn-radius-classic);
+  background: var(--btn-gold-primary);
+  color: #2c1810;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-renaissance);
+  font-family: var(--btn-font-sans);
+  box-shadow: var(--btn-shadow-classic);
+  overflow: hidden;
+  isolation: isolate;
+  user-select: none;
+  outline: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  transition: left 0.6s var(--ease-renaissance);
+  z-index: 1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* 🎨 CLASSICAL ERA BUTTONS */
+.btn-renaissance {
+  background: var(--btn-renaissance);
+  color: #f8f4e9;
+  border: 2px solid #5d4037;
+  font-family: var(--btn-font-serif);
+  text-transform: none;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+.btn-renaissance::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: calc(var(--btn-radius-classic) - 2px);
+  pointer-events: none;
+}
+
+.btn-baroque {
+  background: var(--btn-baroque);
+  color: #f9e076;
+  border: 2px solid #d4af37;
+  font-family: var(--btn-font-serif);
+  font-weight: 700;
+  position: relative;
+  overflow: visible;
+}
+
+.btn-baroque::before {
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(212, 175, 55, 0.3), 
+    transparent);
+}
+
+.btn-baroque::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: var(--btn-gold-primary);
+  border-radius: var(--btn-radius-grand);
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.4s var(--ease-baroque);
+}
+
+.btn-baroque:hover::after {
+  opacity: 0.6;
+}
+
+.btn-victorian {
+  background: var(--btn-victorian);
+  color: #f8f4e9;
+  border: 3px double #d4af37;
+  font-family: var(--btn-font-serif);
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.btn-art-nouveau {
+  background: var(--btn-art-nouveau);
+  color: #2c1810;
+  border: 2px solid #8fbc8f;
+  font-family: var(--btn-font-script);
+  text-transform: none;
+  font-size: 1.1rem;
+  border-radius: var(--btn-radius-pill);
+}
+
+.btn-art-deco {
+  background: var(--btn-art-deco);
+  color: #2c1810;
+  border: 2px solid #ffd700;
+  font-family: var(--btn-font-monospace);
+  letter-spacing: 2px;
+  border-radius: 0;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* 💎 PRECIOUS METAL BUTTONS */
+.btn-gold {
+  background: var(--btn-gold-primary);
+  color: #2c1810;
+  border: 2px solid #d4af37;
+  font-weight: 700;
+}
+
+.btn-silver {
+  background: var(--btn-silver-primary);
+  color: #2c1810;
+  border: 2px solid #c0c0c0;
+}
+
+.btn-bronze {
+  background: var(--btn-bronze-primary);
+  color: #f8f4e9;
+  border: 2px solid #a8662c;
+}
+
+.btn-platinum {
+  background: var(--btn-platinum);
+  color: #2c1810;
+  border: 2px solid #e5e4e2;
+}
+
+.btn-rose-gold {
+  background: var(--btn-rose-gold);
+  color: #2c1810;
+  border: 2px solid #b76e79;
+}
+
+/* 📐 BUTTON SIZES WITH PRECISION */
+.btn-sm {
+  padding: var(--btn-padding-sm);
+  font-size: 0.75rem;
+  border-width: 1px;
+}
+
+.btn-md {
+  padding: var(--btn-padding-md);
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: var(--btn-padding-lg);
+  font-size: 1rem;
+  border-width: 3px;
+}
+
+.btn-xl {
+  padding: var(--btn-padding-xl);
+  font-size: 1.125rem;
+  border-width: 3px;
+  font-weight: 700;
+}
+
+/* 🎯 BUTTON VARIANTS */
+.btn-outline {
+  background: transparent;
+  color: #2c1810;
+  border: 2px solid currentColor;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+}
+
+.btn-outline-silver {
+  background: transparent;
+  color: #c0c0c0;
+  border: 2px solid #c0c0c0;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: currentColor;
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--btn-shadow-classic);
+}
+
+.btn-embossed {
+  box-shadow: var(--btn-shadow-embossed);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-embossed:active {
+  box-shadow: var(--btn-shadow-debossed);
+}
+
+.btn-debossed {
+  box-shadow: var(--btn-shadow-debossed);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-debossed:active {
+  box-shadow: var(--btn-shadow-embossed);
+}
+
+/* 🌟 ULTRA ADVANCED ANIMATIONS */
+@keyframes btnRipple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes btnPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: var(--btn-shadow-classic);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--btn-shadow-glow);
+  }
+}
+
+@keyframes btnGoldGlow {
+  0%, 100% {
+    box-shadow: 
+      var(--btn-shadow-classic),
+      0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 
+      var(--btn-shadow-classic),
+      0 0 40px rgba(212, 175, 55, 0.6),
+      0 0 60px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@keyframes btnFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes btnSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes btnTypewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.btn-ripple:active::after {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  animation: btnRipple 0.6s linear;
+}
+
+.btn-pulse {
+  animation: btnPulse 2s var(--ease-baroque) infinite;
+}
+
+.btn-glow {
+  animation: btnGoldGlow 3s var(--ease-renaissance) infinite;
+}
+
+.btn-float {
+  animation: btnFloat 3s var(--ease-impressionist) infinite;
+}
+
+.btn-spin:hover {
+  animation: btnSpin 1s var(--ease-baroque);
+}
+
+.btn-typewriter {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-typewriter::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: inherit;
+  color: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: btnTypewriter 1.5s var(--ease-neoclassical) forwards;
+}
+
+/* 🛠️ BUTTON STATES & INTERACTIONS */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  animation: none !important;
+}
+
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: btnSpin 1s linear infinite;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  color: white;
+  border-color: #059669;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: #2c1810;
+  border-color: #d97706;
+}
+
+.btn-error {
+  background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+  color: white;
+  border-color: #dc2626;
+}
+
+/* 🎭 ICON BUTTONS */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.btn-icon i,
+.btn-icon svg {
+  width: 1.25em;
+  height: 1.25em;
+  transition: transform 0.3s var(--ease-renaissance);
+}
+
+.btn-icon:hover i,
+.btn-icon:hover svg {
+  transform: scale(1.2);
+}
+
+.btn-icon-only {
+  padding: 0.75rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.btn-icon-only.btn-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+.btn-icon-only.btn-lg {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 1rem;
+}
+
+/* 🏛️ BUTTON GROUPS */
+.btn-group {
+  display: inline-flex;
+  border-radius: var(--btn-radius-classic);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow-classic);
+}
+
+.btn-group .btn {
+  border-radius: 0;
+  margin: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-group .btn:first-child {
+  border-top-left-radius: var(--btn-radius-classic);
+  border-bottom-left-radius: var(--btn-radius-classic);
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: var(--btn-radius-classic);
+  border-bottom-right-radius: var(--btn-radius-classic);
+  border-right: none;
+}
+
+/* 📱 ULTRA RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .btn-lg {
+    padding: 1.125rem 2.25rem;
+  }
+  
+  .btn-xl {
+    padding: 1.25rem 2.5rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group .btn {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-group .btn:first-child {
+    border-top-left-radius: var(--btn-radius-classic);
+    border-top-right-radius: var(--btn-radius-classic);
+    border-bottom-left-radius: 0;
+  }
+  
+  .btn-group .btn:last-child {
+    border-bottom-left-radius: var(--btn-radius-classic);
+    border-bottom-right-radius: var(--btn-radius-classic);
+    border-top-right-radius: 0;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .btn-icon {
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* 🌙 DARK MODE SOPHISTICATION */
+@media (prefers-color-scheme: dark) {
+  .btn-outline {
+    color: #f8f4e9;
+  }
+  
+  .btn-ghost {
+    color: #f8f4e9;
+  }
+  
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ♿ ULTRA ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn::before,
+  .btn::after {
+    transition: none;
+    animation: none;
+  }
+  
+  .btn-ripple::after,
+  .btn-typewriter::before {
+    display: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .btn {
+    border-width: 3px;
+  }
+  
+  .btn-outline {
+    border-width: 3px;
+  }
+}
+
+/* 🎨 CUSTOM PROPERTY OVERRIDES */
+.btn[style*="--btn-bg"] {
+  background: var(--btn-bg, var(--btn-gold-primary));
+}
+
+.btn[style*="--btn-color"] {
+  color: var(--btn-color, #2c1810);
+}
+
+.btn[style*="--btn-border"] {
+  border-color: var(--btn-border, #d4af37);
+}
+
+/* 🏛️ UTILITY CLASSES FOR PERFECTION */
+.btn-elevated {
+  box-shadow: 
+    var(--btn-shadow-elegant),
+    0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.btn-elevated:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    var(--btn-shadow-elegant),
+    0 16px 50px rgba(0, 0, 0, 0.2);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.btn-grain {
+  position: relative;
+}
+
+.btn-grain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="0.5" fill="rgba(0,0,0,0.1)"/><circle cx="80" cy="40" r="0.5" fill="rgba(0,0,0,0.1)"/><circle cx="40" cy="80" r="0.5" fill="rgba(0,0,0,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+/* 🎭 PRINT PERFECTION */
+@media print {
+  .btn {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+    box-shadow: none !important;
+  }
+  
+  .btn-renaissance,
+  .btn-baroque,
+  .btn-victorian {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+  }
+}
