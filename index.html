@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classical CSS Framework - Royal Design System</title>
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Our Classical CSS Framework -->
-    <link rel="stylesheet" href="cards.css">
-    <link rel="stylesheet" href="buttons.css">
-    <link rel="stylesheet" href="forms.css">
-    <link rel="stylesheet" href="tables.css">
-    <link rel="stylesheet" href="progress.css">
-    <link rel="stylesheet" href="alerts.css">
-    <link rel="stylesheet" href="badges.css">
-    <link rel="stylesheet" href="sliders.css">
-    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/cards.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/buttons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/forms.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/tables.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/progress.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/alerts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/badges.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/sliders.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/testimonials.css">
     
     <style>
-        /* Additional styles for the showcase website */
+        /* Global Styles using our framework variables */
         :root {
             --primary-gold: #d4af37;
             --primary-wood: #8b4513;
             --primary-parchment: #fefaf0;
+            --primary-velvet: #2c1810;
         }
         
         * {
@@ -31,13 +38,20 @@
         }
         
         body {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            background: linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%);
-            color: #2c1810;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary-parchment) 0%, #fff8e8 100%);
+            color: var(--primary-velvet);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
         
         .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .container-narrow {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -45,12 +59,16 @@
         
         /* Header Styles */
         .header-royal {
-            background: linear-gradient(135deg, #2c1810 0%, #4a3526 100%);
+            background: linear-gradient(135deg, var(--primary-velvet) 0%, #4a3526 100%);
             color: #f9e076;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             border-bottom: 4px double var(--primary-gold);
-            position: relative;
-            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
         
         .header-royal::before {
@@ -71,19 +89,27 @@
         }
         
         .logo-royal {
-            font-family: 'Trajan Pro', 'Charlemagne', serif;
-            font-size: 2rem;
-            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
             background: var(--primary-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-royal i {
+            font-size: 1.8rem;
         }
         
         .nav-links {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
         
         .nav-link {
@@ -96,6 +122,7 @@
             border: 1px solid transparent;
             border-radius: 4px;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
         
         .nav-link:hover {
@@ -103,12 +130,22 @@
             background: rgba(212, 175, 55, 0.1);
         }
         
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #f9e076;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
         /* Hero Section */
         .hero-royal {
-            padding: 6rem 0;
+            padding: 12rem 0 8rem;
             text-align: center;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" opacity="0.02"><defs><pattern id="heroPattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="3" fill="%238b4513"/><circle cx="150" cy="100" r="3" fill="%238b4513"/><circle cx="100" cy="150" r="3" fill="%238b4513"/></pattern></defs><rect width="200" height="200" fill="url(%23heroPattern)"/></svg>');
             position: relative;
+            overflow: hidden;
         }
         
         .hero-royal::before {
@@ -124,32 +161,45 @@
         }
         
         .hero-title {
-            font-family: 'Trajan Pro', 'Charlemagne', serif;
-            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
             margin-bottom: 1.5rem;
-            color: #2c1810;
+            color: var(--primary-velvet);
             text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+            line-height: 1.2;
         }
         
         .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: #4a3526;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         /* Section Styles */
         .section-royal {
-            padding: 5rem 0;
-            border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .section-royal:nth-child(even) {
+            background: rgba(212, 175, 55, 0.03);
         }
         
         .section-title {
-            font-family: 'Trajan Pro', 'Charlemagne', serif;
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
             text-align: center;
-            margin-bottom: 3rem;
-            color: #2c1810;
+            margin-bottom: 4rem;
+            color: var(--primary-velvet);
             position: relative;
             display: inline-block;
             left: 50%;
@@ -159,86 +209,253 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: 4px;
             background: var(--primary-gold);
             border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            font-size: 1.2rem;
+            color: #4a3526;
         }
         
         /* Component Showcase Grid */
         .components-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .components-grid-wide {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--primary-velvet);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-velvet);
+        }
+        
+        .feature-description {
+            color: #4a3526;
+            line-height: 1.6;
         }
         
         /* Footer */
         .footer-royal {
-            background: linear-gradient(135deg, #2c1810 0%, #4a3526 100%);
+            background: linear-gradient(135deg, var(--primary-velvet) 0%, #4a3526 100%);
             color: #f9e076;
-            padding: 3rem 0;
-            text-align: center;
+            padding: 4rem 0 2rem;
             border-top: 4px double var(--primary-gold);
         }
         
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         
         .footer-logo {
-            font-family: 'Trajan Pro', 'Charlemagne', serif;
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             background: var(--primary-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-description {
+            color: #d4c6b8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #f9e076;
         }
         
         .footer-links {
             display: flex;
-            gap: 1.5rem;
+            flex-direction: column;
+            gap: 0.8rem;
         }
         
         .footer-link {
-            color: #f9e076;
+            color: #d4c6b8;
             text-decoration: none;
             transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .footer-link:hover {
             color: var(--primary-gold);
         }
         
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            color: #d4c6b8;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f9e076;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary-gold);
+            color: var(--primary-velvet);
+            transform: translateY(-3px);
+        }
+        
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-royal {
-                flex-direction: column;
-                gap: 1.5rem;
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 3.5rem;
             }
             
+            .components-grid-wide {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+        
+        @media (max-width: 992px) {
             .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-velvet);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                border-top: 2px solid var(--primary-gold);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-royal {
+                padding: 10rem 0 6rem;
             }
             
             .hero-title {
                 font-size: 2.5rem;
             }
             
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .components-grid {
                 grid-template-columns: 1fr;
             }
             
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-royal {
+                padding: 4rem 0;
+            }
+            
             .footer-content {
-                flex-direction: column;
-                text-align: center;
+                grid-template-columns: 1fr;
             }
         }
         
@@ -259,6 +476,34 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
         }
+        
+        .px-4 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Custom badge for framework version */
+        .version-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
     </style>
 </head>
 <body>
@@ -266,8 +511,15 @@
     <header class="header-royal">
         <div class="container">
             <nav class="nav-royal">
-                <div class="logo-royal">Classical CSS</div>
-                <div class="nav-links">
+                <div class="logo-royal">
+                    <i class="fas fa-crown"></i>
+                    Classical CSS
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#features" class="nav-link">Features</a>
                     <a href="#components" class="nav-link">Components</a>
                     <a href="#testimonials" class="nav-link">Testimonials</a>
                     <a href="#documentation" class="nav-link">Documentation</a>
@@ -279,12 +531,52 @@
 
     <!-- Hero Section -->
     <section class="hero-royal">
+        <div class="container-narrow">
+            <h1 class="hero-title animate-fade-in">Classical CSS Framework</h1>
+            <p class="hero-subtitle animate-fade-in">A museum-grade CSS framework inspired by classical art and architecture. Create stunning, professional websites with royal elegance and timeless design.</p>
+            <div class="hero-actions animate-fade-in">
+                <button class="btn btn-royal btn-lg"><i class="fas fa-download"></i> Get Started</button>
+                <button class="btn btn-royal-outline btn-lg"><i class="fas fa-eye"></i> View Components</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-royal">
         <div class="container">
-            <h1 class="hero-title">Classical CSS Framework</h1>
-            <p class="hero-subtitle">A museum-grade CSS framework inspired by classical art and architecture. Create stunning, professional websites with royal elegance and timeless design.</p>
-            <div class="hero-actions">
-                <button class="btn btn-royal btn-lg">Get Started</button>
-                <button class="btn btn-royal-outline btn-lg">View Components</button>
+            <h2 class="section-title">Royal Features</h2>
+            <p class="section-subtitle">Our framework brings the elegance of classical design to modern web development with these premium features</p>
+            
+            <div class="feature-grid">
+                <div class="card card-renaissance text-center">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="feature-title">Historical Themes</h3>
+                        <p class="feature-description">Choose from Egyptian, Greek, Roman, Renaissance, and Baroque design themes for authentic classical aesthetics.</p>
+                    </div>
+                </div>
+                
+                <div class="card card-baroque text-center">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Fully Responsive</h3>
+                        <p class="feature-description">Every component is meticulously crafted to look perfect on all devices, from mobile to desktop.</p>
+                    </div>
+                </div>
+                
+                <div class="card card-egyptian text-center">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">Advanced Animations</h3>
+                        <p class="feature-description">Smooth, elegant animations inspired by classical movements that enhance user experience.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -293,12 +585,14 @@
     <section id="components" class="section-royal">
         <div class="container">
             <h2 class="section-title">Royal Cards</h2>
-            <div class="components-grid">
+            <p class="section-subtitle">Showcase your content with these elegant card designs inspired by different historical eras</p>
+            
+            <div class="components-grid components-grid-wide">
                 <div class="card card-renaissance card-animate-masterpiece">
-                    <img src="https://via.placeholder.com/400x200/8b4513/ffffff?text=Renaissance+Art" class="card-img card-img-top" alt="Renaissance Art">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img card-img-top" alt="Renaissance Art">
                     <div class="card-body">
                         <h3 class="card-title">Renaissance Card</h3>
-                        <p class="card-text">Experience the beauty of classical artistry with our curated masterpiece collection.</p>
+                        <p class="card-text">Experience the beauty of classical artistry with our curated masterpiece collection. Perfect for showcasing artistic content.</p>
                         <div class="card-actions">
                             <button class="card-btn card-btn-gold">View Collection</button>
                             <button class="card-btn card-btn-ghost">Learn History</button>
@@ -309,7 +603,7 @@
                 <div class="card card-baroque card-animate-classical">
                     <div class="card-body card-body-grand">
                         <h3 class="card-title">Baroque Elegance</h3>
-                        <p class="card-text">Luxurious design inspired by the grandeur of Baroque architecture and art.</p>
+                        <p class="card-text">Luxurious design inspired by the grandeur of Baroque architecture and art. Ideal for premium content presentation.</p>
                         <div class="card-actions">
                             <button class="card-btn card-btn-gold">Explore</button>
                             <button class="card-btn card-btn-silver">Gallery</button>
@@ -318,10 +612,10 @@
                 </div>
 
                 <div class="card card-gallery-frame card-parchment-aged">
-                    <img src="https://via.placeholder.com/400x250/daa520/000000?text=Classical+Portrait" class="card-img-masterpiece" alt="Classical Portrait">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-masterpiece" alt="Classical Portrait">
                     <div class="card-body">
                         <h3 class="card-title">Classical Portrait</h3>
-                        <p class="card-text">A masterpiece from the golden age of portrait painting.</p>
+                        <p class="card-text">A masterpiece from the golden age of portrait painting. This card style adds a museum-like quality to your images.</p>
                     </div>
                 </div>
             </div>
@@ -332,16 +626,37 @@
     <section class="section-royal">
         <div class="container">
             <h2 class="section-title">Royal Buttons</h2>
+            <p class="section-subtitle">Interactive elements designed with historical elegance and modern functionality</p>
+            
             <div class="components-grid">
-                <div class="text-center">
-                    <button class="btn btn-renaissance btn-lg mb-4">Renaissance Era</button>
-                    <button class="btn btn-baroque btn-glow btn-pulse mb-4">Baroque Gold</button>
-                    <button class="btn btn-victorian btn-outline btn-icon mb-4">
-                        <span>Victorian Style</span>
-                    </button>
-                    <div class="btn-group">
-                        <button class="btn btn-art-deco btn-sm">Previous</button>
-                        <button class="btn btn-art-deco btn-sm">Next</button>
+                <div class="card card-renaissance text-center py-4">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Button Variants</h3>
+                        <div class="flex-column gap-3">
+                            <button class="btn btn-renaissance btn-lg mb-3">Renaissance Era</button>
+                            <button class="btn btn-baroque btn-glow btn-pulse mb-3">Baroque Gold</button>
+                            <button class="btn btn-victorian btn-outline btn-icon mb-3">
+                                <i class="fas fa-crown"></i>
+                                Victorian Style
+                            </button>
+                            <div class="btn-group mt-2">
+                                <button class="btn btn-art-deco btn-sm">Previous</button>
+                                <button class="btn btn-art-deco btn-sm active">1</button>
+                                <button class="btn btn-art-deco btn-sm">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card card-baroque text-center py-4">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Button Sizes</h3>
+                        <div class="flex-column gap-3">
+                            <button class="btn btn-royal btn-sm mb-2">Small Button</button>
+                            <button class="btn btn-royal mb-2">Medium Button</button>
+                            <button class="btn btn-royal btn-lg mb-2">Large Button</button>
+                            <button class="btn btn-royal btn-xl">Extra Large</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -350,9 +665,11 @@
 
     <!-- Forms Section -->
     <section class="section-royal">
-        <div class="container">
+        <div class="container-narrow">
             <h2 class="section-title">Royal Forms</h2>
-            <div class="form-container form-variant-renaissance form-textured" style="max-width: 600px; margin: 0 auto;">
+            <p class="section-subtitle">Elegant form elements that maintain classical aesthetics while providing modern usability</p>
+            
+            <div class="form-container form-variant-renaissance form-textured">
                 <div class="form-group">
                     <label class="form-label">Full Name</label>
                     <input type="text" class="form-input form-input-renaissance form-animate-focus" placeholder="Enter your royal name">
@@ -360,7 +677,7 @@
                 
                 <div class="form-row form-col-2">
                     <div class="form-group">
-                        <label class="form-label">Email</label>
+                        <label class="form-label">Email Address</label>
                         <input type="email" class="form-input form-input-gold form-animate-glow" required>
                     </div>
                     
@@ -378,20 +695,32 @@
                 
                 <div class="form-group">
                     <label class="form-label">Royal Message</label>
-                    <textarea class="form-textarea" placeholder="Your royal decree..."></textarea>
+                    <textarea class="form-textarea" placeholder="Your royal decree..." rows="4"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input">
                         <span class="form-check-box"></span>
-                        <span>I agree to the royal terms</span>
+                        <span>I agree to the royal terms and conditions</span>
+                    </label>
+                    
+                    <label class="form-check">
+                        <input type="radio" name="priority" class="form-check-input" checked>
+                        <span class="form-check-radio"></span>
+                        <span>Standard Priority</span>
+                    </label>
+                    
+                    <label class="form-check">
+                        <input type="radio" name="priority" class="form-check-input">
+                        <span class="form-check-radio"></span>
+                        <span>Royal Priority</span>
                     </label>
                 </div>
                 
                 <div class="form-actions">
-                    <button type="submit" class="form-btn form-btn-primary">Send Decree</button>
-                    <button type="reset" class="form-btn form-btn-secondary">Clear</button>
+                    <button type="submit" class="form-btn form-btn-primary"><i class="fas fa-paper-plane"></i> Send Decree</button>
+                    <button type="reset" class="form-btn form-btn-secondary">Clear Form</button>
                 </div>
             </div>
         </div>
@@ -401,6 +730,8 @@
     <section class="section-royal">
         <div class="container">
             <h2 class="section-title">Royal Progress</h2>
+            <p class="section-subtitle">Visual indicators that show progress with classical elegance and smooth animations</p>
+            
             <div class="components-grid">
                 <div class="progress-container">
                     <div class="progress-label">
@@ -413,7 +744,7 @@
                     <div class="progress-caption">Masterpiece restoration in progress</div>
                 </div>
 
-                <div class="progress-container" style="text-align: center;">
+                <div class="progress-container text-center">
                     <div class="progress-circular progress-circular-baroque" style="--progress-percentage: 60%">
                         <div class="progress-circular-inner">
                             <div class="progress-circular-track"></div>
@@ -425,6 +756,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="progress-caption mt-3">Project completion status</div>
                 </div>
 
                 <div class="progress-container">
@@ -442,6 +774,7 @@
                             <div class="progress-step-label">Finish</div>
                         </div>
                     </div>
+                    <div class="progress-caption text-center mt-3">Art creation workflow</div>
                 </div>
             </div>
         </div>
@@ -449,12 +782,14 @@
 
     <!-- Alerts Section -->
     <section class="section-royal">
-        <div class="container">
+        <div class="container-narrow">
             <h2 class="section-title">Royal Alerts</h2>
+            <p class="section-subtitle">Elegant notification systems that command attention with classical authority</p>
+            
             <div class="components-grid">
                 <div class="alert-container-royal">
                     <div class="alert-royal alert-royal-success alert-animate-glow">
-                        <div class="alert-royal-icon">✓</div>
+                        <div class="alert-royal-icon"><i class="fas fa-check"></i></div>
                         <div class="alert-royal-content">
                             <h3 class="alert-royal-title">Success!</h3>
                             <p class="alert-royal-message">Your masterpiece has been successfully saved to the royal archives.</p>
@@ -468,7 +803,7 @@
 
                 <div class="alert-container-royal">
                     <div class="alert-royal alert-egyptian alert-royal-warning alert-animate-shake">
-                        <div class="alert-royal-icon">⚠</div>
+                        <div class="alert-royal-icon"><i class="fas fa-exclamation-triangle"></i></div>
                         <div class="alert-royal-content">
                             <h3 class="alert-royal-title">Pharaoh's Warning</h3>
                             <p class="alert-royal-message">The sacred scrolls require your immediate attention in the great library.</p>
@@ -476,6 +811,17 @@
                                 <button class="alert-btn-royal alert-btn-royal-primary">Visit Library</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="alert-container-royal">
+                    <div class="alert-royal alert-royal-info alert-royal-dismissible">
+                        <div class="alert-royal-icon"><i class="fas fa-info-circle"></i></div>
+                        <div class="alert-royal-content">
+                            <h3 class="alert-royal-title">Information</h3>
+                            <p class="alert-royal-message">The royal library will be closed for restoration next week.</p>
+                        </div>
+                        <button class="alert-royal-close">×</button>
                     </div>
                 </div>
             </div>
@@ -486,20 +832,38 @@
     <section class="section-royal">
         <div class="container">
             <h2 class="section-title">Royal Badges</h2>
-            <div class="components-grid">
-                <div class="text-center">
-                    <span class="badge-royal badge-animate-glow mb-4">Premium</span>
-                    <span class="badge-royal badge-egyptian badge-royal-success badge-royal-lg mb-4">
-                        <span class="badge-royal-icon">✓</span>
-                        Verified
-                    </span>
-                    <span class="badge-royal badge-royal-status badge-royal-info mb-4">Online</span>
-                    <span class="badge-royal badge-royal-ribbon badge-royal-warning mb-4">Featured</span>
-                    
-                    <div class="badge-group-royal mt-4">
-                        <span class="badge-royal badge-royal-sm badge-royal-success">New</span>
-                        <span class="badge-royal badge-royal-sm badge-royal-info">Updated</span>
-                        <span class="badge-royal badge-royal-sm badge-royal-warning">Limited</span>
+            <p class="section-subtitle">Elegant indicators and labels that add visual hierarchy with classical styling</p>
+            
+            <div class="card card-renaissance">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Badge Varieties</h3>
+                    <div class="text-center">
+                        <span class="badge-royal badge-animate-glow mb-3 mr-2">Premium</span>
+                        <span class="badge-royal badge-egyptian badge-royal-success badge-royal-lg mb-3 mr-2">
+                            <span class="badge-royal-icon"><i class="fas fa-check"></i></span>
+                            Verified
+                        </span>
+                        <span class="badge-royal badge-royal-status badge-royal-info mb-3 mr-2">Online</span>
+                        <span class="badge-royal badge-royal-ribbon badge-royal-warning mb-3">Featured</span>
+                        
+                        <div class="badge-group-royal mt-4 justify-center">
+                            <span class="badge-royal badge-royal-sm badge-royal-success">New</span>
+                            <span class="badge-royal badge-royal-sm badge-royal-info">Updated</span>
+                            <span class="badge-royal badge-royal-sm badge-royal-warning">Limited</span>
+                            <span class="badge-royal badge-royal-sm badge-royal-error">Sold Out</span>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <span class="badge-royal badge-royal-outline badge-royal-renaissance mr-2">
+                                Classical
+                            </span>
+                            <span class="badge-royal badge-royal-ghost badge-royal-pill mr-2">
+                                Elegant
+                            </span>
+                            <span class="badge-royal badge-royal-counter" data-count="5">
+                                Notifications
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -510,13 +874,15 @@
     <section id="testimonials" class="section-royal">
         <div class="container">
             <h2 class="section-title">Royal Testimonials</h2>
+            <p class="section-subtitle">Hear from historical figures who appreciate the classical elegance of our framework</p>
+            
             <div class="testimonials-container-royal">
                 <div class="testimonials-grid-royal testimonial-animate-stagger">
                     
                     <div class="testimonial-royal testimonial-egyptian testimonial-animate-float">
                         <div class="testimonial-royal-content">
                             <p class="testimonial-royal-quote">
-                                This framework transformed our ancient artifacts into digital masterpieces. The craftsmanship is truly pharaonic!
+                                This framework transformed our ancient artifacts into digital masterpieces. The craftsmanship is truly pharaonic! The attention to detail rivals the great pyramids.
                             </p>
                             <div class="testimonial-royal-author">
                                 <div class="testimonial-royal-avatar">👑</div>
@@ -539,7 +905,7 @@
                     <div class="testimonial-royal testimonial-greek testimonial-animate-glow">
                         <div class="testimonial-royal-content">
                             <p class="testimonial-royal-quote">
-                                A work of art that would make the gods themselves envious. The perfect balance of form and function.
+                                A work of art that would make the gods themselves envious. The perfect balance of form and function. This framework embodies the golden ratio in digital form.
                             </p>
                             <div class="testimonial-royal-author">
                                 <div class="testimonial-royal-avatar">⚡</div>
@@ -562,7 +928,7 @@
                     <div class="testimonial-royal testimonial-renaissance testimonial-royal-featured testimonial-royal-lg">
                         <div class="testimonial-royal-content">
                             <p class="testimonial-royal-quote">
-                                As a master of the arts, I can truly appreciate the Renaissance-level quality and attention to detail in this magnificent framework.
+                                As a master of the arts, I can truly appreciate the Renaissance-level quality and attention to detail in this magnificent framework. It brings the beauty of classical art to the digital canvas.
                             </p>
                             <div class="testimonial-royal-author">
                                 <div class="testimonial-royal-avatar">🎨</div>
@@ -589,14 +955,18 @@
 
     <!-- Call to Action -->
     <section id="download" class="section-royal">
-        <div class="container">
-            <div class="card card-baroque card-animate-glow text-center" style="max-width: 800px; margin: 0 auto;">
+        <div class="container-narrow">
+            <div class="card card-baroque card-animate-glow text-center">
                 <div class="card-body card-body-grand">
                     <h2 class="card-title">Ready to Create Royal Websites?</h2>
-                    <p class="card-text mb-4">Download our complete Classical CSS Framework and start building museum-quality websites today.</p>
+                    <p class="card-text mb-4">Download our complete Classical CSS Framework and start building museum-quality websites with timeless elegance.</p>
                     <div class="card-actions" style="justify-content: center;">
-                        <button class="btn btn-royal btn-xl">Download Framework</button>
-                        <button class="btn btn-royal-outline btn-xl">View Documentation</button>
+                        <button class="btn btn-royal btn-xl"><i class="fas fa-download"></i> Download Framework</button>
+                        <button class="btn btn-royal-outline btn-xl"><i class="fas fa-book"></i> View Documentation</button>
+                    </div>
+                    <div class="mt-4">
+                        <span class="badge-royal badge-royal-sm badge-royal-success mr-2">v1.0.0</span>
+                        <span class="badge-royal badge-royal-sm badge-royal-info">MIT License</span>
                     </div>
                 </div>
             </div>
@@ -607,90 +977,128 @@
     <footer class="footer-royal">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Classical CSS Framework</div>
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Documentation</a>
-                    <a href="#" class="footer-link">Examples</a>
-                    <a href="#" class="footer-link">GitHub</a>
-                    <a href="#" class="footer-link">License</a>
+                <div>
+                    <div class="footer-logo">
+                        <i class="fas fa-crown"></i>
+                        Classical CSS
+                    </div>
+                    <p class="footer-description">
+                        A museum-grade CSS framework inspired by classical art and architecture. Create stunning, professional websites with royal elegance.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-npm"></i></a>
+                    </div>
                 </div>
-                <div class="footer-copyright">
-                    &copy; 2023 Classical CSS Framework. All rights reserved.
+                
+                <div>
+                    <h3 class="footer-heading">Framework</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link"><i class="fas fa-download"></i> Download</a>
+                        <a href="#" class="footer-link"><i class="fas fa-book"></i> Documentation</a>
+                        <a href="#" class="footer-link"><i class="fas fa-code"></i> Examples</a>
+                        <a href="#" class="footer-link"><i class="fas fa-sync"></i> Changelog</a>
+                    </div>
                 </div>
+                
+                <div>
+                    <h3 class="footer-heading">Resources</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link"><i class="fas fa-paint-brush"></i> Themes</a>
+                        <a href="#" class="footer-link"><i class="fas fa-icons"></i> Icons</a>
+                        <a href="#" class="footer-link"><i class="fas fa-palette"></i> Colors</a>
+                        <a href="#" class="footer-link"><i class="fas fa-font"></i> Typography</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Community</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="footer-link"><i class="fab fa-discord"></i> Discord</a>
+                        <a href="#" class="footer-link"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="mailto:hanzlabaig917@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Classical CSS Framework. Created with <i class="fas fa-heart" style="color: #d4af37;"></i> by the Royal Development Team.</p>
+                <p>Released under the MIT License. Website designed with our own Classical CSS Framework.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Version Badge -->
+    <div class="version-badge">
+        <span class="badge-royal badge-royal-success badge-royal-pill">v1.0.0</span>
+    </div>
+
     <script>
-        // Simple JavaScript for interactive elements
+        // Mobile Menu Toggle
         document.addEventListener('DOMContentLoaded', function() {
-            // Add animation to hero section
-            const heroTitle = document.querySelector('.hero-title');
-            heroTitle.style.opacity = '0';
-            heroTitle.style.transform = 'translateY(20px)';
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
             
-            setTimeout(() => {
-                heroTitle.style.transition = 'all 0.8s ease';
-                heroTitle.style.opacity = '1';
-                heroTitle.style.transform = 'translateY(0)';
-            }, 300);
-            
-            // Add scroll animation to section titles
-            const sectionTitles = document.querySelectorAll('.section-title');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateX(-50%) translateY(0)';
-                    }
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
                 });
-            }, { threshold: 0.5 });
+            }
             
-            sectionTitles.forEach(title => {
-                title.style.opacity = '0';
-                title.style.transform = 'translateX(-50%) translateY(20px)';
-                title.style.transition = 'all 0.6s ease';
-                observer.observe(title);
+            // Close mobile menu when clicking on a link
+            const navLinkItems = document.querySelectorAll('.nav-link');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
             });
             
-            // Simple carousel functionality for testimonials
-            const carouselItems = document.querySelectorAll('.testimonial-carousel-item');
-            const dots = document.querySelectorAll('.testimonial-carousel-dot');
-            const prevBtn = document.querySelector('.testimonial-carousel-btn:first-child');
-            const nextBtn = document.querySelector('.testimonial-carousel-btn:last-child');
-            let currentIndex = 0;
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
             
-            function updateCarousel() {
-                carouselItems.forEach((item, index) => {
-                    item.style.display = index === currentIndex ? 'block' : 'none';
-                });
+            // Add animation to elements on scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.card, .feature-card, .testimonial-royal');
                 
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentIndex);
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('animate-fade-in');
+                    }
                 });
-            }
+            };
             
-            if (prevBtn && nextBtn) {
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-                    updateCarousel();
+            // Run on load and scroll
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Alert close functionality
+            const alertCloseButtons = document.querySelectorAll('.alert-royal-close');
+            alertCloseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.alert-container-royal').style.display = 'none';
                 });
-                
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % carouselItems.length;
-                    updateCarousel();
-                });
-                
-                dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => {
-                        currentIndex = index;
-                        updateCarousel();
-                    });
-                });
-                
-                updateCarousel();
-            }
+            });
         });
     </script>
 </body>
