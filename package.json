@@ -1,0 +1,32 @@
+{
+  "name": "classical-css-framework",
+  "version": "1.0.0",
+  "description": "A beautiful, professional classical CSS framework with advanced components and animations",
+  "main": "classical.css",
+  "style": "classical.css",
+  "files": [
+    "*.css",
+    "LICENSE"
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "classical",
+    "professional",
+    "responsive",
+    "beautiful",
+    "elegant",
+    "ui",
+    "components"
+  ],
+  "author": "Hanzla Baig",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/classical-css-framework.git"
+  },
+  "homepage": "https://YOUR_USERNAME.github.io/classical-css-framework",
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/classical-css-framework/issues"
+  }
+}
