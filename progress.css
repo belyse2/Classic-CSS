@@ -1,0 +1,793 @@
+/* progress.css - ULTRA MASTERPIECE Classical Professional Progress Framework */
+/* Version 7.0 - Supreme Excellence in Classical Progress Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Colors */
+  --progress-bg-antique-parchment: #fefaf0;
+  --progress-bg-royal-ivory: #fffaf0;
+  --progress-bg-gilded-velvet: #2a1810;
+  --progress-bg-carrara-marble: #f8f4f0;
+  --progress-bg-vermeil-gold: #fff8e8;
+  --progress-bg-sterling-silver: #fafbfc;
+  --progress-bg-patina-bronze: #f5f0e8;
+  --progress-bg-illuminated: #fffef7;
+  
+  /* 👑 ROYAL METALLIC GRADIENTS - Palace Quality */
+  --progress-royal-gold: 
+    linear-gradient(135deg, 
+      #ffd700 0%, 
+      #fff8dc 15%, 
+      #ffec8b 30%, 
+      #daa520 45%, 
+      #b8860b 60%, 
+      #daa520 75%, 
+      #ffec8b 90%, 
+      #fff8dc 100%);
+  
+  --progress-crown-jewels: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 12%,
+      #ffdf00 25%,
+      #daa520 37%,
+      #b8860b 50%,
+      #daa520 62%,
+      #ffdf00 75%,
+      #f9e076 87%,
+      #d4af37 100%);
+  
+  --progress-imperial-silver: 
+    linear-gradient(135deg,
+      #c0c0c0 0%,
+      #e8e8e8 15%,
+      #f0f0f0 30%,
+      #d8d8d8 45%,
+      #a9a9a9 60%,
+      #d8d8d8 75%,
+      #f0f0f0 90%,
+      #e8e8e8 100%);
+  
+  --progress-royal-bronze: 
+    linear-gradient(135deg,
+      #cd7f32 0%,
+      #e39d55 15%,
+      #f0b27a 30%,
+      #d18a4a 45%,
+      #a8662c 60%,
+      #d18a4a 75%,
+      #f0b27a 90%,
+      #e39d55 100%);
+
+  /* 🏛️ HISTORICAL ERA MASTERPIECES */
+  --progress-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 20%,
+      #b8860b 40%,
+      #8b6914 60%,
+      #b8860b 80%,
+      #daa520 100%);
+  
+  --progress-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --progress-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --progress-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --progress-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 12%,
+      #b8860b 25%,
+      #daa520 37%,
+      #cd853f 50%,
+      #daa520 62%,
+      #b8860b 75%,
+      #a0522d 87%,
+      #8b4513 100%);
+  
+  --progress-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 15%,
+      #654321 30%,
+      #8b4513 45%,
+      #a0522d 60%,
+      #8b4513 75%,
+      #654321 90%,
+      #4a3526 100%);
+
+  /* 🎨 MASTER ARTIST PALETTE */
+  --progress-van-gogh: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #ffed4e 16%,
+      #4a6572 33%,
+      #344955 50%,
+      #4a6572 66%,
+      #ffed4e 83%,
+      #ffd700 100%);
+  
+  --progress-rembrandt: 
+    linear-gradient(135deg,
+      #8b7355 0%,
+      #a0522d 20%,
+      #cd853f 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #a0522d 100%);
+  
+  --progress-monet: 
+    linear-gradient(135deg,
+      #87ceeb 0%,
+      #98fb98 25%,
+      #ffb6c1 50%,
+      #98fb98 75%,
+      #87ceeb 100%);
+
+  /* 🏰 ARCHITECTURAL SHADOWS */
+  --progress-shadow-palace: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(0, 0, 0, 0.12),
+    0 32px 64px rgba(0, 0, 0, 0.08),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  
+  --progress-shadow-cathedral: 
+    0 12px 36px rgba(0, 0, 0, 0.2),
+    0 24px 60px rgba(0, 0, 0, 0.15),
+    0 48px 96px rgba(0, 0, 0, 0.1),
+    inset 0 3px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.3);
+  
+  --progress-shadow-golden: 
+    0 0 30px rgba(212, 175, 55, 0.4),
+    0 0 60px rgba(212, 175, 55, 0.3),
+    0 0 90px rgba(212, 175, 55, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* 🖋️ CALLIGRAPHY TYPOGRAPHY */
+  --progress-font-palace: 'Palatino Linotype', 'Book Antiqua', serif;
+  --progress-font-royal: 'Garamond', 'Times New Roman', serif;
+  --progress-font-illuminated: 'Trajan Pro', 'Charlemagne', serif;
+  --progress-font-manuscript: 'Apple Chancery', 'Zapfino', cursive;
+  --progress-font-latin: 'Latin Modern Roman', serif;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL PROGRESS CONTAINER */
+.progress-container-royal {
+  position: relative;
+  background: var(--progress-bg-antique-parchment);
+  border: 3px double #8b4513;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--progress-shadow-palace);
+  font-family: var(--progress-font-royal);
+  backdrop-filter: blur(10px);
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><defs><pattern id="royalPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%238b4513"/><circle cx="80" cy="40" r="2" fill="%238b4513"/><circle cx="40" cy="80" r="2" fill="%238b4513"/></pattern></defs><rect width="100" height="100" fill="url(%23royalPattern)"/></svg>');
+}
+
+.progress-container-royal::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.progress-container-royal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 🏆 CROWN JEWEL PROGRESS BARS */
+.progress-royal {
+  width: 100%;
+  background: 
+    linear-gradient(to bottom, #f8f4e9 0%, #f0e6d2 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" opacity="0.05"><rect width="20" height="20" fill="%238b4513"/></svg>');
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 
+    inset 0 3px 6px rgba(255, 255, 255, 0.8),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #8b4513;
+  height: 24px;
+}
+
+.progress-royal-bar {
+  height: 100%;
+  background: var(--progress-crown-jewels);
+  border-radius: inherit;
+  position: relative;
+  transition: all 1.2s var(--ease-throne);
+  animation: royalProgress 2s var(--ease-royal);
+  overflow: hidden;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(212, 175, 55, 0.3);
+}
+
+.progress-royal-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255, 255, 255, 0.8) 50%, 
+      transparent 100%);
+  animation: royalShine 3s var(--ease-scepter) infinite;
+  border-radius: inherit;
+}
+
+.progress-royal-bar::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* 🏛️ HISTORICAL ERA PROGRESS BARS */
+.progress-egyptian {
+  background: 
+    linear-gradient(to bottom, #f5f5dc 0%, #e6e6fa 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" opacity="0.03"><path d="M15,5 L25,25 L5,25 Z" fill="%23ffd700"/></svg>');
+  border: 3px solid #daa520;
+  height: 28px;
+}
+
+.progress-egyptian .progress-royal-bar {
+  background: var(--progress-egyptian);
+  animation: hieroglyphicProgress 2.5s var(--ease-royal);
+}
+
+.progress-greek {
+  background: 
+    linear-gradient(to bottom, #f8f8ff 0%, #e6e6fa 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" opacity="0.04"><path d="M12.5,5 L20,20 L5,20 Z" fill="%234b0082"/></svg>');
+  border: 2px solid #4b0082;
+  height: 20px;
+}
+
+.progress-greek .progress-royal-bar {
+  background: var(--progress-greek);
+}
+
+.progress-roman {
+  background: 
+    linear-gradient(to bottom, #fff0f5 0%, #ffe4e1 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" opacity="0.04"><path d="M14,5 L23,23 L5,23 Z" fill="%238b0000"/></svg>');
+  border: 3px solid #8b0000;
+  height: 26px;
+}
+
+.progress-roman .progress-royal-bar {
+  background: var(--progress-roman);
+}
+
+.progress-medieval {
+  background: 
+    linear-gradient(to bottom, #f0fff0 0%, #e0f0e0 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" opacity="0.03"><path d="M16,6 L26,26 L6,26 Z" fill="%232f4f4f"/></svg>');
+  border: 3px solid #2f4f4f;
+  height: 30px;
+}
+
+.progress-medieval .progress-royal-bar {
+  background: var(--progress-medieval);
+}
+
+/* 🎨 MASTER ARTIST PROGRESS BARS */
+.progress-van-gogh {
+  background: 
+    linear-gradient(135deg, #87ceeb 0%, #98fb98 50%, #ffb6c1 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" opacity="0.02"><circle cx="20" cy="20" r="15" fill="%234a6572" stroke="%23ffd700" stroke-width="2"/></svg>');
+  border: 2px solid #4a6572;
+}
+
+.progress-van-gogh .progress-royal-bar {
+  background: var(--progress-van-gogh);
+  animation: starryNight 3s var(--ease-orb) infinite alternate;
+}
+
+.progress-rembrandt {
+  background: 
+    linear-gradient(to bottom, #8b7355 0%, #a0522d 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" opacity="0.03"><path d="M17.5,7 L28,28 L7,28 Z" fill="%23daa520"/></svg>');
+  border: 3px solid #daa520;
+}
+
+.progress-rembrandt .progress-royal-bar {
+  background: var(--progress-rembrandt);
+}
+
+/* 👑 ROYAL CIRCULAR PROGRESS */
+.progress-circular-royal {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" opacity="0.02"><circle cx="80" cy="80" r="70" fill="none" stroke="%238b4513" stroke-width="2" stroke-dasharray="5,5"/></svg>');
+  border-radius: 50%;
+  box-shadow: var(--progress-shadow-cathedral);
+  border: 4px double #d4af37;
+  padding: 8px;
+}
+
+.progress-circular-royal::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  animation: royalOrbRotate 8s linear infinite;
+}
+
+.progress-circular-royal-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-circular-royal-track {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--progress-crown-jewels) 0%,
+    var(--progress-crown-jewels) var(--progress-percentage, 0%),
+    transparent var(--progress-percentage, 0%),
+    transparent 100%
+  );
+  position: relative;
+  transition: all 2s var(--ease-throne);
+  animation: royalCircularGlow 4s var(--ease-scepter) infinite;
+}
+
+.progress-circular-royal-overlay {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 76%;
+  height: 76%;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" opacity="0.03"><circle cx="60" cy="60" r="50" fill="none" stroke="%23d4af37" stroke-width="1" stroke-dasharray="3,3"/></svg>');
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    inset 0 4px 8px rgba(255, 255, 255, 0.8),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.progress-circular-royal-content {
+  text-align: center;
+  font-family: var(--progress-font-illuminated);
+  font-weight: 700;
+  color: #8b4513;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.progress-circular-royal-content .percentage {
+  font-size: 2.5rem;
+  line-height: 1;
+  background: var(--progress-crown-jewels);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.progress-circular-royal-content .label {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: #8b4513;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🏰 GRAND STEPPED PROGRESS */
+.progress-stepped-royal {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.progress-stepped-royal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: 
+    linear-gradient(to right, #8b4513 0%, #d4af37 50%, #8b4513 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="6" opacity="0.1"><rect width="20" height="6" fill="%23ffd700"/></svg>');
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 3px;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-step-royal {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" opacity="0.05"><circle cx="24" cy="24" r="20" fill="%238b4513"/></svg>');
+  border: 3px solid #8b4513;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.6s var(--ease-coronation);
+  font-family: var(--progress-font-royal);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #8b4513;
+  box-shadow: var(--progress-shadow-palace);
+}
+
+.progress-step-royal::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s var(--ease-scepter);
+}
+
+.progress-step-royal.active {
+  background: var(--progress-crown-jewels);
+  border-color: #d4af37;
+  color: #2c1810;
+  transform: scale(1.2);
+  box-shadow: var(--progress-shadow-golden);
+  animation: stepPulse 2s var(--ease-royal) infinite;
+}
+
+.progress-step-royal.active::before {
+  opacity: 1;
+  animation: stepOrbit 3s linear infinite;
+}
+
+.progress-step-royal.completed {
+  background: var(--progress-crown-jewels);
+  border-color: #d4af37;
+  color: #2c1810;
+}
+
+.progress-step-royal.completed::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 1rem;
+  animation: crownSparkle 2s var(--ease-crown) infinite;
+}
+
+.progress-step-royal-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #8b4513;
+  white-space: nowrap;
+  font-family: var(--progress-font-royal);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-step-royal.active .progress-step-royal-label {
+  color: #d4af37;
+  text-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+}
+
+/* 👑 IMPERIAL ANIMATIONS */
+@keyframes royalProgress {
+  0% {
+    width: 0%;
+    opacity: 0;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes royalShine {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes royalCircularGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+  }
+}
+
+@keyframes royalOrbRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stepPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 rgba(212, 175, 55, 0.4),
+      var(--progress-shadow-palace);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(212, 175, 55, 0.8),
+      var(--progress-shadow-palace);
+  }
+}
+
+@keyframes stepOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes crownSparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes hieroglyphicProgress {
+  0% {
+    width: 0%;
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes starryNight {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  100% {
+    filter: hue-rotate(90deg) brightness(1.2);
+  }
+}
+
+/* 🎭 ROYAL LABELS & CAPTIONS */
+.progress-label-royal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--progress-font-illuminated);
+  background: 
+    linear-gradient(to right, rgba(139, 69, 19, 0.1), rgba(212, 175, 55, 0.1), rgba(139, 69, 19, 0.1));
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(139, 69, 19, 0.3);
+}
+
+.progress-title-royal {
+  font-weight: 700;
+  color: #8b4513;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.progress-percentage-royal {
+  font-weight: 700;
+  color: #8b4513;
+  font-size: 1.25rem;
+  font-family: var(--progress-font-latin);
+  background: var(--progress-crown-jewels);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  border-radius: 6px;
+}
+
+.progress-caption-royal {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #8b4513;
+  font-family: var(--progress-font-manuscript);
+  text-align: center;
+  font-style: italic;
+  padding: 0.75rem;
+  background: rgba(255, 248, 232, 0.5);
+  border-radius: 6px;
+  border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+/* 🏆 RESPONSIVE ROYAL DESIGN */
+@media (max-width: 1200px) {
+  .progress-circular-royal {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .progress-step-royal {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-container-royal {
+    padding: 2rem 1.5rem;
+  }
+  
+  .progress-circular-royal {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .progress-step-royal {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+  
+  .progress-stepped-royal {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-container-royal {
+    padding: 1.5rem 1rem;
+  }
+  
+  .progress-circular-royal {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .progress-step-royal {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+  
+  .progress-label-royal {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .progress-container-royal {
+    background: #1a1208;
+    color: #f8f4e9;
+  }
+  
+  .progress-royal {
+    background: 
+      linear-gradient(to bottom, #2a1f10 0%, #1a1208 100%);
+  }
+  
+  .progress-title-royal,
+  .progress-caption-royal {
+    color: #f8f4e9;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .progress-container-royal {
+    background: white !important;
+    color: black !important;
+    border: 3px double black !important;
+    box-shadow: none !important;
+  }
+  
+  .progress-royal-bar {
+    background: #333 !important;
+  }
+}
