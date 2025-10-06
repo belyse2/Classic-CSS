@@ -1,0 +1,847 @@
+/* alerts.css - ULTRA MASTERPIECE Classical Professional Alert Framework */
+/* Version 8.0 - Supreme Excellence in Classical Alert Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Alert Colors */
+  --alert-bg-royal-parchment: #fefaf0;
+  --alert-bg-imperial-ivory: #fffaf0;
+  --alert-bg-gilded-velvet: #2a1810;
+  --alert-bg-carrara-marble: #f8f4f0;
+  --alert-bg-vermeil-gold: #fff8e8;
+  --alert-bg-sterling-silver: #fafbfc;
+  --alert-bg-patina-bronze: #f5f0e8;
+  --alert-bg-illuminated: #fffef7;
+  
+  /* 👑 ROYAL ALERT TYPES - Palace Quality Colors */
+  --alert-success-royal: 
+    linear-gradient(135deg, 
+      #10b981 0%, 
+      #34d399 15%, 
+      #6ee7b7 30%, 
+      #059669 45%, 
+      #047857 60%, 
+      #059669 75%, 
+      #6ee7b7 90%, 
+      #34d399 100%);
+  
+  --alert-warning-royal: 
+    linear-gradient(135deg,
+      #f59e0b 0%,
+      #fbbf24 15%,
+      #fcd34d 30%,
+      #d97706 45%,
+      #b45309 60%,
+      #d97706 75%,
+      #fcd34d 90%,
+      #fbbf24 100%);
+  
+  --alert-error-royal: 
+    linear-gradient(135deg,
+      #ef4444 0%,
+      #f87171 15%,
+      #fca5a5 30%,
+      #dc2626 45%,
+      #b91c1c 60%,
+      #dc2626 75%,
+      #fca5a5 90%,
+      #f87171 100%);
+  
+  --alert-info-royal: 
+    linear-gradient(135deg,
+      #3b82f6 0%,
+      #60a5fa 15%,
+      #93c5fd 30%,
+      #2563eb 45%,
+      #1d4ed8 60%,
+      #2563eb 75%,
+      #93c5fd 90%,
+      #60a5fa 100%);
+  
+  --alert-royal-gold: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 15%,
+      #ffdf00 30%,
+      #daa520 45%,
+      #b8860b 60%,
+      #daa520 75%,
+      #ffdf00 90%,
+      #f9e076 100%);
+
+  /* 🏛️ HISTORICAL ERA ALERTS */
+  --alert-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 25%,
+      #b8860b 50%,
+      #8b6914 75%,
+      #b8860b 100%);
+  
+  --alert-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --alert-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --alert-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --alert-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 20%,
+      #b8860b 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #daa520 100%);
+  
+  --alert-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 20%,
+      #654321 40%,
+      #8b4513 60%,
+      #a0522d 80%,
+      #8b4513 100%);
+
+  /* 🏰 ARCHITECTURAL SHADOWS */
+  --alert-shadow-palace: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(0, 0, 0, 0.12),
+    0 32px 64px rgba(0, 0, 0, 0.08),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  
+  --alert-shadow-cathedral: 
+    0 12px 36px rgba(0, 0, 0, 0.2),
+    0 24px 60px rgba(0, 0, 0, 0.15),
+    0 48px 96px rgba(0, 0, 0, 0.1),
+    inset 0 3px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.3);
+  
+  --alert-shadow-golden: 
+    0 0 30px rgba(212, 175, 55, 0.4),
+    0 0 60px rgba(212, 175, 55, 0.3),
+    0 0 90px rgba(212, 175, 55, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* 🖋️ CALLIGRAPHY TYPOGRAPHY */
+  --alert-font-palace: 'Palatino Linotype', 'Book Antiqua', serif;
+  --alert-font-royal: 'Garamond', 'Times New Roman', serif;
+  --alert-font-illuminated: 'Trajan Pro', 'Charlemagne', serif;
+  --alert-font-manuscript: 'Apple Chancery', 'Zapfino', cursive;
+  --alert-font-latin: 'Latin Modern Roman', serif;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL ALERT CONTAINER */
+.alert-container-royal {
+  position: relative;
+  background: var(--alert-bg-royal-parchment);
+  border: 3px double #8b4513;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--alert-shadow-palace);
+  font-family: var(--alert-font-royal);
+  backdrop-filter: blur(10px);
+  margin: 2rem 0;
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><defs><pattern id="royalPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%238b4513"/><circle cx="80" cy="40" r="2" fill="%238b4513"/><circle cx="40" cy="80" r="2" fill="%238b4513"/></pattern></defs><rect width="100" height="100" fill="url(%23royalPattern)"/></svg>');
+  overflow: hidden;
+}
+
+.alert-container-royal::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.alert-container-royal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 🏆 CROWN JEWEL ALERT BASE */
+.alert-royal {
+  position: relative;
+  padding: 2rem 3rem 2rem 5rem;
+  border-radius: 12px;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%238b4513"/></svg>');
+  border: 2px solid #8b4513;
+  box-shadow: 
+    inset 0 3px 6px rgba(255, 255, 255, 0.8),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: var(--alert-font-royal);
+  animation: royalAlertEntrance 0.8s var(--ease-throne);
+}
+
+.alert-royal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--alert-royal-gold);
+  border-radius: 12px 0 0 12px;
+}
+
+.alert-royal-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--alert-royal-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 4px 8px rgba(212, 175, 55, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6);
+  animation: iconPulse 2s var(--ease-royal) infinite;
+}
+
+.alert-royal-icon::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  animation: iconOrbit 3s linear infinite;
+}
+
+.alert-royal-content {
+  position: relative;
+  z-index: 2;
+}
+
+.alert-royal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8b4513;
+  margin-bottom: 0.75rem;
+  font-family: var(--alert-font-illuminated);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.alert-royal-message {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a3526;
+  margin-bottom: 1.5rem;
+  font-family: var(--alert-font-royal);
+}
+
+.alert-royal-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 🎨 ROYAL ALERT TYPES */
+.alert-royal-success {
+  background: 
+    linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%23059669"/></svg>');
+  border-color: #059669;
+}
+
+.alert-royal-success::before {
+  background: var(--alert-success-royal);
+}
+
+.alert-royal-success .alert-royal-icon {
+  background: var(--alert-success-royal);
+}
+
+.alert-royal-success .alert-royal-title {
+  color: #065f46;
+}
+
+.alert-royal-warning {
+  background: 
+    linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%23d97706"/></svg>');
+  border-color: #d97706;
+}
+
+.alert-royal-warning::before {
+  background: var(--alert-warning-royal);
+}
+
+.alert-royal-warning .alert-royal-icon {
+  background: var(--alert-warning-royal);
+}
+
+.alert-royal-warning .alert-royal-title {
+  color: #92400e;
+}
+
+.alert-royal-error {
+  background: 
+    linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%23dc2626"/></svg>');
+  border-color: #dc2626;
+}
+
+.alert-royal-error::before {
+  background: var(--alert-error-royal);
+}
+
+.alert-royal-error .alert-royal-icon {
+  background: var(--alert-error-royal);
+}
+
+.alert-royal-error .alert-royal-title {
+  color: #991b1b;
+}
+
+.alert-royal-info {
+  background: 
+    linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%232563eb"/></svg>');
+  border-color: #2563eb;
+}
+
+.alert-royal-info::before {
+  background: var(--alert-info-royal);
+}
+
+.alert-royal-info .alert-royal-icon {
+  background: var(--alert-info-royal);
+}
+
+.alert-royal-info .alert-royal-title {
+  color: #1e40af;
+}
+
+/* 🏛️ HISTORICAL ERA ALERTS */
+.alert-egyptian {
+  background: 
+    linear-gradient(135deg, #fffaf0 0%, #ffe4b5 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%23daa520"/></svg>');
+  border: 3px solid #daa520;
+}
+
+.alert-egyptian::before {
+  background: var(--alert-egyptian);
+}
+
+.alert-egyptian .alert-royal-icon {
+  background: var(--alert-egyptian);
+}
+
+.alert-greek {
+  background: 
+    linear-gradient(135deg, #f8f8ff 0%, #e6e6fa 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%234b0082"/></svg>');
+  border: 2px solid #4b0082;
+}
+
+.alert-greek::before {
+  background: var(--alert-greek);
+}
+
+.alert-greek .alert-royal-icon {
+  background: var(--alert-greek);
+}
+
+.alert-roman {
+  background: 
+    linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%238b0000"/></svg>');
+  border: 3px solid #8b0000;
+}
+
+.alert-roman::before {
+  background: var(--alert-roman);
+}
+
+.alert-roman .alert-royal-icon {
+  background: var(--alert-roman);
+}
+
+.alert-renaissance {
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #f5f5dc 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%238b4513"/></svg>');
+  border: 3px solid #8b4513;
+}
+
+.alert-renaissance::before {
+  background: var(--alert-renaissance);
+}
+
+.alert-renaissance .alert-royal-icon {
+  background: var(--alert-renaissance);
+}
+
+/* 🎪 ALERT SIZES */
+.alert-royal-sm {
+  padding: 1.5rem 2rem 1.5rem 4rem;
+}
+
+.alert-royal-sm .alert-royal-icon {
+  width: 2rem;
+  height: 2rem;
+  left: 1rem;
+}
+
+.alert-royal-sm .alert-royal-title {
+  font-size: 1.1rem;
+}
+
+.alert-royal-lg {
+  padding: 3rem 4rem 3rem 6rem;
+}
+
+.alert-royal-lg .alert-royal-icon {
+  width: 3rem;
+  height: 3rem;
+  left: 2rem;
+}
+
+.alert-royal-lg .alert-royal-title {
+  font-size: 1.5rem;
+}
+
+.alert-royal-xl {
+  padding: 4rem 5rem 4rem 7rem;
+}
+
+.alert-royal-xl .alert-royal-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 2.5rem;
+}
+
+.alert-royal-xl .alert-royal-title {
+  font-size: 1.75rem;
+}
+
+/* 🏆 ROYAL ALERT BUTTONS */
+.alert-btn-royal {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid;
+  border-radius: 8px;
+  font-family: var(--alert-font-royal);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-coronation);
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-btn-royal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s var(--ease-scepter);
+}
+
+.alert-btn-royal:hover::before {
+  left: 100%;
+}
+
+.alert-btn-royal-primary {
+  background: var(--alert-royal-gold);
+  color: #2c1810;
+  border-color: #d4af37;
+}
+
+.alert-btn-royal-secondary {
+  background: transparent;
+  color: #8b4513;
+  border-color: #8b4513;
+}
+
+.alert-btn-royal-ghost {
+  background: transparent;
+  color: #8b4513;
+  border-color: transparent;
+}
+
+/* 🎭 ROYAL ALERT ANIMATIONS */
+@keyframes royalAlertEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    box-shadow: 
+      0 4px 8px rgba(212, 175, 55, 0.3),
+      inset 0 2px 4px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 
+      0 6px 12px rgba(212, 175, 55, 0.5),
+      inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes iconOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes alertGlow {
+  0%, 100% {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.8),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+      0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.8),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+      0 4px 12px rgba(0, 0, 0, 0.15),
+      0 0 20px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@keyframes alertBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.alert-animate-glow {
+  animation: alertGlow 2s var(--ease-royal) infinite;
+}
+
+.alert-animate-border-flow::before {
+  animation: alertBorderFlow 3s var(--ease-scepter) infinite;
+}
+
+.alert-animate-float {
+  animation: royalAlertEntrance 0.8s var(--ease-throne), alertFloat 3s var(--ease-orb) infinite;
+}
+
+@keyframes alertFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.alert-animate-shake {
+  animation: royalAlertEntrance 0.8s var(--ease-throne), alertShake 0.5s var(--ease-crown);
+}
+
+@keyframes alertShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* 📱 RESPONSIVE ROYAL ALERTS */
+@media (max-width: 1200px) {
+  .alert-container-royal {
+    padding: 2rem;
+  }
+  
+  .alert-royal {
+    padding: 1.75rem 2.5rem 1.75rem 4.5rem;
+  }
+  
+  .alert-royal-lg {
+    padding: 2.5rem 3.5rem 2.5rem 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .alert-container-royal {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .alert-royal {
+    padding: 1.5rem 2rem 1.5rem 4rem;
+  }
+  
+  .alert-royal-icon {
+    width: 2rem;
+    height: 2rem;
+    left: 1rem;
+  }
+  
+  .alert-royal-title {
+    font-size: 1.1rem;
+  }
+  
+  .alert-royal-message {
+    font-size: 0.9rem;
+  }
+  
+  .alert-royal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .alert-btn-royal {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .alert-container-royal {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .alert-royal {
+    padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+  }
+  
+  .alert-royal-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    left: 0.75rem;
+  }
+  
+  .alert-royal-title {
+    font-size: 1rem;
+  }
+  
+  .alert-royal-message {
+    font-size: 0.85rem;
+  }
+}
+
+/* 🏰 ROYAL ALERT VARIANTS */
+.alert-royal-dismissible {
+  padding-right: 5rem;
+}
+
+.alert-royal-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 2px solid #8b4513;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-coronation);
+  font-family: var(--alert-font-royal);
+  font-weight: 700;
+  color: #8b4513;
+}
+
+.alert-royal-close:hover {
+  background: #8b4513;
+  color: #fefaf0;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.alert-royal-banner {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  animation: bannerSlide 0.6s var(--ease-throne);
+}
+
+@keyframes bannerSlide {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.alert-royal-toast {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 400px;
+  z-index: 10000;
+  animation: toastSlide 0.5s var(--ease-crown);
+  box-shadow: var(--alert-shadow-cathedral);
+}
+
+@keyframes toastSlide {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.alert-royal-floating {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  z-index: 10000;
+  animation: modalAppear 0.6s var(--ease-throne);
+  box-shadow: var(--alert-shadow-golden);
+}
+
+@keyframes modalAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .alert-container-royal {
+    background: #1a1208;
+    color: #f8f4e9;
+  }
+  
+  .alert-royal {
+    background: 
+      linear-gradient(135deg, #2a1f10 0%, #1a1208 100%);
+    color: #f8f4e9;
+  }
+  
+  .alert-royal-title {
+    color: #f8f4e9;
+  }
+  
+  .alert-royal-message {
+    color: #d4c6b8;
+  }
+}
+
+/* ♿ ROYAL ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .alert-royal,
+  .alert-royal-icon,
+  .alert-btn-royal {
+    animation: none;
+    transition: none;
+  }
+  
+  .alert-royal-icon::before {
+    display: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .alert-royal {
+    border-width: 4px;
+  }
+  
+  .alert-royal::before {
+    width: 6px;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .alert-container-royal {
+    background: white !important;
+    color: black !important;
+    border: 3px double black !important;
+    box-shadow: none !important;
+  }
+  
+  .alert-royal {
+    background: white !important;
+    border: 2px solid black !important;
+  }
+  
+  .alert-royal::before {
+    background: #333 !important;
+  }
+}
