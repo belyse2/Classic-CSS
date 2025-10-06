@@ -1,0 +1,559 @@
+/* cards.css - Ultra Advanced Classical Professional Card Framework */
+/* Version 2.0 - Masterpiece Card System with Classical Elegance */
+
+:root {
+  /* Classical Color Palette - Inspired by Renaissance & Baroque Art */
+  --card-bg-ivory: #fefef5;
+  --card-bg-parchment: #f8f4e9;
+  --card-bg-velvet: #2c1810;
+  --card-bg-marble: #f5f2ed;
+  --card-bg-gold-leaf: #fff9e6;
+  --card-bg-silver: #f8f9fc;
+  
+  /* Classical Border Colors */
+  --card-border-gold: linear-gradient(45deg, #d4af37, #f9e076, #d4af37);
+  --card-border-silver: linear-gradient(45deg, #c0c0c0, #e8e8e8, #c0c0c0);
+  --card-border-wood: linear-gradient(45deg, #8b4513, #a0522d, #8b4513);
+  --card-border-velvet: #3a2618;
+  
+  /* Sophisticated Shadows */
+  --card-shadow-classic: 
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.06),
+    0 16px 32px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  
+  --card-shadow-elegant:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 16px 48px rgba(0, 0, 0, 0.08),
+    0 32px 64px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  
+  --card-shadow-museum:
+    0 25px 50px rgba(0, 0, 0, 0.25),
+    0 15px 30px rgba(0, 0, 0, 0.22),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  
+  /* Classical Typography */
+  --card-font-serif: 'Playfair Display', 'Times New Roman', serif;
+  --card-font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+  --card-font-script: 'Dancing Script', cursive;
+  
+  /* Gold & Silver Gradients */
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f9e076 50%, #d4af37 100%);
+  --gradient-silver: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 50%, #c0c0c0 100%);
+  --gradient-rose-gold: linear-gradient(135deg, #b76e79 0%, #e8c4c4 50%, #b76e79 100%);
+  
+  /* Advanced Spacing System */
+  --card-padding-classic: 2rem;
+  --card-padding-grand: 3rem;
+  --card-padding-petite: 1.5rem;
+  
+  /* Classical Border Radius */
+  --radius-gentle: 8px;
+  --radius-classic: 12px;
+  --radius-grand: 20px;
+  --radius-ornate: 4px 20px 4px 20px;
+  
+  /* Masterpiece Animations */
+  --ease-renaissance: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-baroque: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-neoclassical: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-impressionist: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* 🎨 MASTERPIECE CARD BASE */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--card-bg-ivory);
+  background-clip: border-box;
+  border: 1px solid transparent;
+  border-radius: var(--radius-classic);
+  box-shadow: var(--card-shadow-classic);
+  transition: all 0.6s var(--ease-renaissance);
+  font-family: var(--card-font-serif);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* 🎭 CLASSICAL CARD VARIANTS */
+.card-renaissance {
+  background: var(--card-bg-parchment);
+  border: 2px solid;
+  border-image: var(--card-border-wood) 1;
+  box-shadow: var(--card-shadow-museum);
+  font-family: var(--card-font-serif);
+  position: relative;
+}
+
+.card-renaissance::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255,255,255,0.1) 0%,
+    rgba(0,0,0,0.05) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-baroque {
+  background: var(--card-bg-velvet);
+  color: #f8f4e9;
+  border: 3px solid;
+  border-image: var(--card-border-gold) 1;
+  box-shadow: var(--card-shadow-elegant);
+  position: relative;
+  overflow: visible;
+}
+
+.card-baroque::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-grand);
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.8s var(--ease-baroque);
+}
+
+.card-baroque:hover::after {
+  opacity: 0.6;
+}
+
+.card-neoclassical {
+  background: var(--card-bg-marble);
+  border: 1px solid #e8e2d9;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.card-neoclassical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255,255,255,0.8) 20%,
+    rgba(255,255,255,0.9) 50%,
+    rgba(255,255,255,0.8) 80%,
+    transparent 100%);
+}
+
+.card-empire {
+  background: var(--gradient-gold);
+  color: #2c1810;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-empire::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+/* 🖼️ ULTRA ADVANCED IMAGE SYSTEMS */
+.card-img-masterpiece {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  position: relative;
+  transition: all 0.8s var(--ease-impressionist);
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.card-img-renaissance {
+  border-bottom: 3px solid #8b4513;
+  filter: sepia(0.3) brightness(0.98) contrast(1.1);
+}
+
+.card-img-baroque {
+  border: 2px solid;
+  border-image: var(--gradient-gold) 1;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+  height: 250px;
+  filter: brightness(1.05) saturate(1.1);
+}
+
+.card-img-gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-gallery::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255,255,255,0.1) 0%,
+    rgba(0,0,0,0.1) 100%);
+  pointer-events: none;
+  transition: opacity 0.6s var(--ease-renaissance);
+}
+
+/* 🎪 MASTERPIECE CARD BODY */
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--card-padding-classic);
+  position: relative;
+  z-index: 2;
+}
+
+.card-body-grand {
+  padding: var(--card-padding-grand);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-gold);
+  transition: width 0.6s var(--ease-renaissance);
+}
+
+.card:hover .card-title::after {
+  width: 100px;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--card-muted-color);
+  margin-bottom: 1rem;
+  font-family: var(--card-font-sans);
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: inherit;
+  margin-bottom: 1.5rem;
+  font-family: var(--card-font-sans);
+  opacity: 0.9;
+}
+
+/* 🎨 CLASSICAL BUTTON SYSTEM */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-gentle);
+  transition: all 0.4s var(--ease-renaissance);
+  cursor: pointer;
+  background: none;
+  font-family: var(--card-font-sans);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s var(--ease-renaissance);
+}
+
+.card-btn:hover::before {
+  left: 100%;
+}
+
+.card-btn-gold {
+  background: var(--gradient-gold);
+  color: #2c1810;
+  border: 2px solid #d4af37;
+}
+
+.card-btn-silver {
+  background: var(--gradient-silver);
+  color: #2c1810;
+  border: 2px solid #c0c0c0;
+}
+
+.card-btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 2px solid currentColor;
+}
+
+/* 🌟 ULTRA ADVANCED ANIMATIONS */
+@keyframes masterpieceFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes classicalEntrance {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(10deg) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0) translateY(0);
+  }
+}
+
+@keyframes goldGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(212, 175, 55, 0.3),
+      var(--card-shadow-classic);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(212, 175, 55, 0.6),
+      0 0 80px rgba(212, 175, 55, 0.3),
+      var(--card-shadow-classic);
+  }
+}
+
+@keyframes parchmentAge {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* 🎯 ANIMATION CLASSES */
+.card-animate-masterpiece {
+  animation: masterpieceFadeIn 1.2s var(--ease-renaissance) forwards;
+}
+
+.card-animate-classical {
+  animation: classicalEntrance 1s var(--ease-neoclassical) forwards;
+}
+
+.card-animate-glow {
+  animation: goldGlow 3s var(--ease-baroque) infinite;
+}
+
+.card-parchment-aged {
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba(0,0,0,0.03) 100%),
+    linear-gradient(rgba(0,0,0,0.03) 50%, transparent 50%);
+  background-size: 20px 20px, 100% 2px;
+  animation: parchmentAge 20s linear infinite;
+}
+
+/* 🖼️ GALLERY FRAME EFFECTS */
+.card-gallery-frame {
+  border: 20px solid;
+  border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><defs><linearGradient id="frame" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%238b4513;stop-opacity:1"/><stop offset="50%" style="stop-color:%23a0522d;stop-opacity:1"/><stop offset="100%" style="stop-color:%238b4513;stop-opacity:1"/></linearGradient></defs><rect width="100" height="100" fill="url(%23frame)"/></svg>') 30 repeat;
+  padding: 0;
+  background: var(--card-bg-parchment);
+}
+
+.card-gallery-frame .card-body {
+  padding: 2rem;
+}
+
+/* 📱 ULTRA RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+  .card-body-grand {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --card-padding-classic: 1.5rem;
+    --card-padding-grand: 2rem;
+  }
+  
+  .card-actions {
+    justify-content: center;
+  }
+  
+  .card-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .card-img-masterpiece {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .card-btn {
+    text-align: center;
+  }
+}
+
+/* 🌙 DARK MODE SOPHISTICATION */
+@media (prefers-color-scheme: dark) {
+  .card-renaissance {
+    background: #1a1208;
+    color: #f8f4e9;
+  }
+  
+  .card-neoclassical {
+    background: #2a2a2a;
+    color: #e8e2d9;
+    border-color: #444;
+  }
+}
+
+/* ♿ ULTRA ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-btn,
+  .card-img-masterpiece {
+    transition: none;
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+    box-shadow: 0 0 0 2px currentColor;
+  }
+}
+
+/* 🎨 CUSTOM PROPERTY OVERRIDES */
+.card[style*="--custom-bg"] {
+  background: var(--custom-bg, var(--card-bg-ivory));
+}
+
+.card[style*="--custom-border"] {
+  border-image: var(--custom-border, var(--card-border-gold)) 1;
+}
+
+/* 🏛️ UTILITY CLASSES FOR PERFECTION */
+.card-textured {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+}
+
+.card-embossed {
+  box-shadow: 
+    inset 0 2px 4px rgba(255,255,255,0.8),
+    inset 0 -2px 4px rgba(0,0,0,0.1),
+    var(--card-shadow-classic);
+}
+
+.card-debossed {
+  box-shadow: 
+    inset 0 -2px 4px rgba(255,255,255,0.5),
+    inset 0 2px 4px rgba(0,0,0,0.1),
+    var(--card-shadow-classic);
+}
+
+.card-gold-foil {
+  position: relative;
+}
+
+.card-gold-foil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 🎭 PRINT PERFECTION */
+@media print {
+  .card {
+    box-shadow: none;
+    border: 2px solid #000;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .card-renaissance,
+  .card-baroque,
+  .card-neoclassical {
+    background: white !important;
+    border: 2px solid #000 !important;
+  }
+}
