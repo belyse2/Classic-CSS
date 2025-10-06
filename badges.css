@@ -1,0 +1,750 @@
+/* badges.css - ULTRA MASTERPIECE Classical Professional Badge Framework */
+/* Version 9.0 - Supreme Excellence in Classical Badge Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Badge Colors */
+  --badge-bg-royal-parchment: #fefaf0;
+  --badge-bg-imperial-ivory: #fffaf0;
+  --badge-bg-gilded-velvet: #2a1810;
+  --badge-bg-carrara-marble: #f8f4f0;
+  --badge-bg-vermeil-gold: #fff8e8;
+  --badge-bg-sterling-silver: #fafbfc;
+  --badge-bg-patina-bronze: #f5f0e8;
+  --badge-bg-illuminated: #fffef7;
+  
+  /* 👑 ROYAL BADGE TYPES - Palace Quality Colors */
+  --badge-success-royal: 
+    linear-gradient(135deg, 
+      #10b981 0%, 
+      #34d399 15%, 
+      #6ee7b7 30%, 
+      #059669 45%, 
+      #047857 60%, 
+      #059669 75%, 
+      #6ee7b7 90%, 
+      #34d399 100%);
+  
+  --badge-warning-royal: 
+    linear-gradient(135deg,
+      #f59e0b 0%,
+      #fbbf24 15%,
+      #fcd34d 30%,
+      #d97706 45%,
+      #b45309 60%,
+      #d97706 75%,
+      #fcd34d 90%,
+      #fbbf24 100%);
+  
+  --badge-error-royal: 
+    linear-gradient(135deg,
+      #ef4444 0%,
+      #f87171 15%,
+      #fca5a5 30%,
+      #dc2626 45%,
+      #b91c1c 60%,
+      #dc2626 75%,
+      #fca5a5 90%,
+      #f87171 100%);
+  
+  --badge-info-royal: 
+    linear-gradient(135deg,
+      #3b82f6 0%,
+      #60a5fa 15%,
+      #93c5fd 30%,
+      #2563eb 45%,
+      #1d4ed8 60%,
+      #2563eb 75%,
+      #93c5fd 90%,
+      #60a5fa 100%);
+  
+  --badge-royal-gold: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 15%,
+      #ffdf00 30%,
+      #daa520 45%,
+      #b8860b 60%,
+      #daa520 75%,
+      #ffdf00 90%,
+      #f9e076 100%);
+
+  /* 🏛️ HISTORICAL ERA BADGES */
+  --badge-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 25%,
+      #b8860b 50%,
+      #8b6914 75%,
+      #b8860b 100%);
+  
+  --badge-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --badge-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --badge-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --badge-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 20%,
+      #b8860b 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #daa520 100%);
+  
+  --badge-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 20%,
+      #654321 40%,
+      #8b4513 60%,
+      #a0522d 80%,
+      #8b4513 100%);
+
+  /* 🏰 ARCHITECTURAL SHADOWS */
+  --badge-shadow-palace: 
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    0 16px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  
+  --badge-shadow-cathedral: 
+    0 6px 20px rgba(0, 0, 0, 0.18),
+    0 12px 28px rgba(0, 0, 0, 0.15),
+    0 24px 48px rgba(0, 0, 0, 0.12),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  
+  --badge-shadow-golden: 
+    0 0 20px rgba(212, 175, 55, 0.4),
+    0 0 40px rgba(212, 175, 55, 0.3),
+    0 0 60px rgba(212, 175, 55, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.15);
+
+  /* 🖋️ CALLIGRAPHY TYPOGRAPHY */
+  --badge-font-palace: 'Palatino Linotype', 'Book Antiqua', serif;
+  --badge-font-royal: 'Garamond', 'Times New Roman', serif;
+  --badge-font-illuminated: 'Trajan Pro', 'Charlemagne', serif;
+  --badge-font-manuscript: 'Apple Chancery', 'Zapfino', cursive;
+  --badge-font-latin: 'Latin Modern Roman', serif;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL BADGE BASE */
+.badge-royal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  position: relative;
+  font-family: var(--badge-font-royal);
+  background: var(--badge-royal-gold);
+  color: #2c1810;
+  box-shadow: var(--badge-shadow-palace);
+  border: 2px solid #d4af37;
+  animation: badgeEntrance 0.6s var(--ease-throne);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.badge-royal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.3) 0%, 
+      transparent 50%, 
+      rgba(255, 255, 255, 0.1) 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.badge-royal::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* 🎨 ROYAL BADGE TYPES */
+.badge-royal-success {
+  background: var(--badge-success-royal);
+  border-color: #059669;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.badge-royal-warning {
+  background: var(--badge-warning-royal);
+  border-color: #d97706;
+  color: #2c1810;
+}
+
+.badge-royal-error {
+  background: var(--badge-error-royal);
+  border-color: #dc2626;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.badge-royal-info {
+  background: var(--badge-info-royal);
+  border-color: #2563eb;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 🏛️ HISTORICAL ERA BADGES */
+.badge-egyptian {
+  background: var(--badge-egyptian);
+  border: 2px solid #daa520;
+  color: #2c1810;
+  font-family: var(--badge-font-illuminated);
+  position: relative;
+}
+
+.badge-egyptian::before {
+  background: 
+    linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.4) 0%, 
+      transparent 50%, 
+      rgba(255, 215, 0, 0.2) 100%);
+}
+
+.badge-greek {
+  background: var(--badge-greek);
+  border: 2px solid #4b0082;
+  color: #2c1810;
+  font-family: var(--badge-font-latin);
+}
+
+.badge-roman {
+  background: var(--badge-roman);
+  border: 2px solid #8b0000;
+  color: #fff;
+  font-family: var(--badge-font-illuminated);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.badge-medieval {
+  background: var(--badge-medieval);
+  border: 2px solid #2f4f4f;
+  color: #fff;
+  font-family: var(--badge-font-palace);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.badge-renaissance {
+  background: var(--badge-renaissance);
+  border: 2px solid #8b4513;
+  color: #fff;
+  font-family: var(--badge-font-manuscript);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.badge-baroque {
+  background: var(--badge-baroque);
+  border: 2px solid #654321;
+  color: #f9e076;
+  font-family: var(--badge-font-royal);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 📐 ROYAL BADGE SIZES */
+.badge-royal-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.625rem;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.badge-royal-sm::after {
+  top: 0.5px;
+  left: 0.5px;
+  right: 0.5px;
+  bottom: 0.5px;
+  border-radius: 3px;
+}
+
+.badge-royal-md {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 8px;
+}
+
+.badge-royal-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 12px;
+  border-width: 3px;
+}
+
+.badge-royal-lg::after {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 9px;
+}
+
+.badge-royal-xl {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 16px;
+  border-width: 3px;
+  font-weight: 800;
+}
+
+.badge-royal-xl::after {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 13px;
+}
+
+/* 🎪 BADGE SHAPES & STYLES */
+.badge-royal-pill {
+  border-radius: 50px;
+}
+
+.badge-royal-pill::after {
+  border-radius: 48px;
+}
+
+.badge-royal-square {
+  border-radius: 4px;
+}
+
+.badge-royal-square::after {
+  border-radius: 2px;
+}
+
+.badge-royal-outline {
+  background: transparent;
+  color: inherit;
+  text-shadow: none;
+}
+
+.badge-royal-outline::before {
+  display: none;
+}
+
+.badge-royal-ghost {
+  background: rgba(139, 69, 19, 0.1);
+  border-color: rgba(139, 69, 19, 0.3);
+  color: #8b4513;
+  backdrop-filter: none;
+}
+
+.badge-royal-ghost::before {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* 🏆 ROYAL BADGE WITH ICONS */
+.badge-royal-with-icon {
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+}
+
+.badge-royal-icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  animation: iconSparkle 2s var(--ease-royal) infinite;
+}
+
+.badge-royal-lg .badge-royal-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1rem;
+}
+
+.badge-royal-xl .badge-royal-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* 👑 ROYAL STATUS BADGES */
+.badge-royal-status {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.badge-royal-status::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #10b981;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #10b981;
+  animation: statusPulse 2s var(--ease-crown) infinite;
+}
+
+.badge-royal-status-offline::before {
+  background: #6b7280;
+  box-shadow: 0 0 0 2px #6b7280;
+  animation: none;
+}
+
+.badge-royal-status-warning::before {
+  background: #f59e0b;
+  box-shadow: 0 0 0 2px #f59e0b;
+}
+
+.badge-royal-status-error::before {
+  background: #ef4444;
+  box-shadow: 0 0 0 2px #ef4444;
+}
+
+/* 🎭 ROYAL BADGE ANIMATIONS */
+@keyframes badgeEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes iconSparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 2px #10b981;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 4px #10b981;
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    box-shadow: var(--badge-shadow-palace);
+  }
+  50% {
+    box-shadow: var(--badge-shadow-golden);
+  }
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes badgeSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.badge-animate-glow {
+  animation: badgeEntrance 0.6s var(--ease-throne), badgeGlow 2s var(--ease-royal) infinite;
+}
+
+.badge-animate-float {
+  animation: badgeEntrance 0.6s var(--ease-throne), badgeFloat 3s var(--ease-orb) infinite;
+}
+
+.badge-animate-spin {
+  animation: badgeEntrance 0.6s var(--ease-throne), badgeSpin 4s linear infinite;
+}
+
+.badge-animate-pulse {
+  animation: badgeEntrance 0.6s var(--ease-throne), statusPulse 2s var(--ease-crown) infinite;
+}
+
+/* 🏰 ROYAL BADGE GROUPS */
+.badge-group-royal {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badge-group-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge-group-justified {
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 📱 RESPONSIVE ROYAL BADGES */
+@media (max-width: 768px) {
+  .badge-royal {
+    font-size: 0.7rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .badge-royal-lg {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .badge-royal-xl {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .badge-group-royal {
+    gap: 0.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-royal {
+    font-size: 0.625rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .badge-royal-with-icon {
+    gap: 0.25rem;
+    padding-left: 0.5rem;
+  }
+  
+  .badge-royal-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    font-size: 0.625rem;
+  }
+  
+  .badge-group-royal {
+    gap: 0.25rem;
+  }
+}
+
+/* 🎨 SPECIAL ROYAL BADGES */
+.badge-royal-ribbon {
+  position: relative;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%);
+}
+
+.badge-royal-ribbon::after {
+  display: none;
+}
+
+.badge-royal-crown {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.badge-royal-crown::before {
+  content: '👑';
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  animation: crownFloat 2s var(--ease-orb) infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateX(-50%) translateY(-2px) rotate(-5deg);
+  }
+  66% {
+    transform: translateX(-50%) translateY(-2px) rotate(5deg);
+  }
+}
+
+.badge-royal-seal {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+.badge-royal-seal::before {
+  border-radius: 50%;
+}
+
+.badge-royal-seal::after {
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+
+.badge-royal-seal-lg {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+}
+
+.badge-royal-seal-xl {
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.25rem;
+}
+
+/* 🏆 ROYAL BADGE WITH COUNTER */
+.badge-royal-counter {
+  position: relative;
+}
+
+.badge-royal-counter::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  background: var(--badge-error-royal);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 800;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: counterPulse 1.5s var(--ease-crown) infinite;
+}
+
+@keyframes counterPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .badge-royal {
+    color: #2c1810;
+  }
+  
+  .badge-royal-ghost {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.4);
+    color: #f9e076;
+  }
+  
+  .badge-royal-outline {
+    color: #f8f4e9;
+  }
+}
+
+/* ♿ ROYAL ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .badge-royal,
+  .badge-royal-icon,
+  .badge-royal-status::before,
+  .badge-royal-counter::after {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .badge-royal {
+    border-width: 3px;
+  }
+  
+  .badge-royal::after {
+    border-width: 2px;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .badge-royal {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .badge-royal::before,
+  .badge-royal::after {
+    display: none;
+  }
+}
