@@ -727,58 +727,550 @@
     </section>
 
     <!-- Progress Section -->
-    <section class="section-royal">
-        <div class="container">
-            <h2 class="section-title">Royal Progress</h2>
-            <p class="section-subtitle">Visual indicators that show progress with classical elegance and smooth animations</p>
-            
-            <div class="components-grid">
-                <div class="progress-container">
-                    <div class="progress-label">
-                        <span class="progress-title">Art Restoration</span>
-                        <span class="progress-percentage">75%</span>
+                     <!-- Sliders Showcase Section -->
+<section class="section-royal">
+    <div class="container">
+        <h2 class="section-title">Royal Sliders</h2>
+        <p class="section-subtitle">Elegant slider controls with classical styling and smooth animations</p>
+        
+        <!-- Standard Royal Sliders -->
+        <div class="card card-renaissance mb-5">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Standard Royal Sliders</h3>
+                
+                <div class="slider-container-royal mb-4">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Masterpiece Quality</span>
+                        <span class="slider-value-royal">75%</span>
                     </div>
-                    <div class="progress progress-renaissance progress-animate-pulse">
-                        <div class="progress-bar" style="width: 75%"></div>
-                    </div>
-                    <div class="progress-caption">Masterpiece restoration in progress</div>
+                    <input type="range" class="slider-royal slider-animate-glow" value="75" min="0" max="100">
+                    <div class="slider-caption-royal">Adjust the quality of your artistic masterpiece</div>
                 </div>
 
-                <div class="progress-container text-center">
-                    <div class="progress-circular progress-circular-baroque" style="--progress-percentage: 60%">
-                        <div class="progress-circular-inner">
-                            <div class="progress-circular-track"></div>
-                            <div class="progress-circular-overlay">
-                                <div class="progress-circular-content">
-                                    <div class="percentage">60%</div>
-                                    <div class="label">Complete</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="slider-container-royal">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Royal Volume</span>
+                        <span class="slider-value-royal">65%</span>
                     </div>
-                    <div class="progress-caption mt-3">Project completion status</div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-stepped">
-                        <div class="progress-step completed">
-                            <div class="progress-step-label">Design</div>
-                        </div>
-                        <div class="progress-step completed">
-                            <div class="progress-step-label">Sketch</div>
-                        </div>
-                        <div class="progress-step active">
-                            <div class="progress-step-label">Paint</div>
-                        </div>
-                        <div class="progress-step">
-                            <div class="progress-step-label">Finish</div>
-                        </div>
-                    </div>
-                    <div class="progress-caption text-center mt-3">Art creation workflow</div>
+                    <input type="range" class="slider-royal slider-animate-thumb-pulse" value="65" min="0" max="100">
+                    <div class="slider-caption-royal">Control the volume of royal announcements</div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Historical Era Sliders -->
+        <div class="card card-baroque mb-5">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Historical Era Sliders</h3>
+                
+                <div class="components-grid">
+                    <div class="slider-container-royal">
+                        <div class="slider-label-royal">
+                            <span class="slider-title-royal">Egyptian Scale</span>
+                            <span class="slider-value-royal">85%</span>
+                        </div>
+                        <input type="range" class="slider-royal slider-egyptian slider-animate-thumb-pulse" value="85" min="0" max="100">
+                        <div class="slider-caption-royal">Pyramid construction progress</div>
+                    </div>
+
+                    <div class="slider-container-royal">
+                        <div class="slider-label-royal">
+                            <span class="slider-title-royal">Greek Harmony</span>
+                            <span class="slider-value-royal">60%</span>
+                        </div>
+                        <input type="range" class="slider-royal slider-greek slider-animate-glow" value="60" min="0" max="100">
+                        <div class="slider-caption-royal">Balance of classical elements</div>
+                    </div>
+
+                    <div class="slider-container-royal">
+                        <div class="slider-label-royal">
+                            <span class="slider-title-royal">Roman Strength</span>
+                            <span class="slider-value-royal">90%</span>
+                        </div>
+                        <input type="range" class="slider-royal slider-roman slider-animate-thumb-orbit" value="90" min="0" max="100">
+                        <div class="slider-caption-royal">Imperial fortification level</div>
+                    </div>
+
+                    <div class="slider-container-royal">
+                        <div class="slider-label-royal">
+                            <span class="slider-title-royal">Renaissance Art</span>
+                            <span class="slider-value-royal">70%</span>
+                        </div>
+                        <input type="range" class="slider-royal slider-renaissance slider-animate-glow" value="70" min="0" max="100">
+                        <div class="slider-caption-royal">Masterpiece completion status</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Sizes -->
+        <div class="card card-egyptian mb-5">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Royal Slider Sizes</h3>
+                
+                <div class="slider-container-royal mb-4">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Small Slider</span>
+                        <span class="slider-value-royal">25%</span>
+                    </div>
+                    <input type="range" class="slider-royal slider-royal-sm" value="25" min="0" max="100">
+                    <div class="slider-caption-royal">Compact size for tight spaces</div>
+                </div>
+
+                <div class="slider-container-royal mb-4">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Medium Slider</span>
+                        <span class="slider-value-royal">50%</span>
+                    </div>
+                    <input type="range" class="slider-royal" value="50" min="0" max="100">
+                    <div class="slider-caption-royal">Standard size for most applications</div>
+                </div>
+
+                <div class="slider-container-royal mb-4">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Large Slider</span>
+                        <span class="slider-value-royal">75%</span>
+                    </div>
+                    <input type="range" class="slider-royal slider-royal-lg" value="75" min="0" max="100">
+                    <div class="slider-caption-royal">Enhanced visibility and touch targets</div>
+                </div>
+
+                <div class="slider-container-royal">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Extra Large Slider</span>
+                        <span class="slider-value-royal">90%</span>
+                    </div>
+                    <input type="range" class="slider-royal slider-royal-xl" value="90" min="0" max="100">
+                    <div class="slider-caption-royal">Maximum visibility and accessibility</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider with Marks -->
+        <div class="card card-roman mb-5">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Sliders with Royal Marks</h3>
+                
+                <div class="slider-container-royal">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Artistic Style Period</span>
+                        <span class="slider-value-royal">Renaissance</span>
+                    </div>
+                    
+                    <div class="slider-royal-marks">
+                        <div class="slider-marks-container">
+                            <div class="slider-mark" style="left: 0%;">Ancient</div>
+                            <div class="slider-mark" style="left: 25%;">Medieval</div>
+                            <div class="slider-mark active" style="left: 50%;">Renaissance</div>
+                            <div class="slider-mark" style="left: 75%;">Baroque</div>
+                            <div class="slider-mark" style="left: 100%;">Modern</div>
+                        </div>
+                        <input type="range" class="slider-royal slider-renaissance" value="50" min="0" max="100" step="25">
+                    </div>
+                    <div class="slider-caption-royal">Select your preferred artistic period</div>
+                </div>
+
+                <div class="slider-container-royal mt-5">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Royal Priority Level</span>
+                        <span class="slider-value-royal">High</span>
+                    </div>
+                    
+                    <div class="slider-royal-marks">
+                        <div class="slider-marks-container">
+                            <div class="slider-mark" style="left: 0%;">Low</div>
+                            <div class="slider-mark" style="left: 33%;">Medium</div>
+                            <div class="slider-mark active" style="left: 66%;">High</div>
+                            <div class="slider-mark" style="left: 100%;">Royal</div>
+                        </div>
+                        <input type="range" class="slider-royal slider-egyptian" value="66" min="0" max="100" step="33">
+                    </div>
+                    <div class="slider-caption-royal">Set the priority level for your request</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Range Slider -->
+        <div class="card card-baroque mb-5">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Royal Range Slider</h3>
+                
+                <div class="slider-container-royal">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Price Range</span>
+                        <span class="slider-value-royal">$150 - $450</span>
+                    </div>
+                    
+                    <div class="range-slider-royal">
+                        <div class="range-slider-track"></div>
+                        <div class="range-slider-fill" style="left: 30%; width: 40%;"></div>
+                        <div class="range-slider-thumb" style="left: 30%;"></div>
+                        <div class="range-slider-thumb" style="left: 70%;"></div>
+                    </div>
+                    
+                    <div class="slider-caption-royal">Select your preferred price range for royal artifacts</div>
+                </div>
+
+                <div class="slider-container-royal mt-5">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Art Century Range</span>
+                        <span class="slider-value-royal">15th - 18th</span>
+                    </div>
+                    
+                    <div class="range-slider-royal">
+                        <div class="range-slider-track"></div>
+                        <div class="range-slider-fill" style="left: 20%; width: 60%;"></div>
+                        <div class="range-slider-thumb" style="left: 20%;"></div>
+                        <div class="range-slider-thumb" style="left: 80%;"></div>
+                    </div>
+                    
+                    <div class="slider-caption-royal">Filter artworks by century of creation</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Sliders -->
+        <div class="card card-renaissance mb-5">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Vertical Royal Sliders</h3>
+                
+                <div class="components-grid">
+                    <div class="slider-container-royal text-center">
+                        <div class="slider-label-royal">
+                            <span class="slider-title-royal">Vertical Volume</span>
+                            <span class="slider-value-royal">65%</span>
+                        </div>
+                        <div class="d-flex justify-center align-center gap-4">
+                            <input type="range" class="slider-royal slider-royal-vertical slider-renaissance" value="65" min="0" max="100" orient="vertical">
+                            <div class="text-left">
+                                <p class="slider-caption-royal mb-2">Perfect for audio controls and vertical layouts</p>
+                                <p class="slider-caption-royal">Classical styling with smooth vertical motion</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-container-royal text-center">
+                        <div class="slider-label-royal">
+                            <span class="slider-title-royal">Brightness</span>
+                            <span class="slider-value-royal">80%</span>
+                        </div>
+                        <div class="d-flex justify-center align-center gap-4">
+                            <input type="range" class="slider-royal slider-royal-vertical slider-royal-lg slider-egyptian" value="80" min="0" max="100" orient="vertical">
+                            <div class="text-left">
+                                <p class="slider-caption-royal mb-2">Large vertical slider for better control</p>
+                                <p class="slider-caption-royal">Egyptian theme with enhanced visibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Groups -->
+        <div class="card card-egyptian">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Royal Slider Groups</h3>
+                
+                <div class="slider-container-royal">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Color Balance Controls</span>
+                        <span class="slider-value-royal">Multiple</span>
+                    </div>
+                    
+                    <div class="slider-group-royal slider-group-stacked">
+                        <div class="slider-control-group">
+                            <div class="slider-mini-label">
+                                <span>Hue</span>
+                                <span class="slider-mini-value">50%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-sm" value="50" min="0" max="100">
+                        </div>
+                        
+                        <div class="slider-control-group">
+                            <div class="slider-mini-label">
+                                <span>Saturation</span>
+                                <span class="slider-mini-value">75%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-sm slider-roman" value="75" min="0" max="100">
+                        </div>
+                        
+                        <div class="slider-control-group">
+                            <div class="slider-mini-label">
+                                <span>Brightness</span>
+                                <span class="slider-mini-value">25%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-sm slider-greek" value="25" min="0" max="100">
+                        </div>
+                        
+                        <div class="slider-control-group">
+                            <div class="slider-mini-label">
+                                <span>Contrast</span>
+                                <span class="slider-mini-value">60%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-sm slider-renaissance" value="60" min="0" max="100">
+                        </div>
+                    </div>
+                    
+                    <div class="slider-caption-royal">Fine-tune your color settings with grouped sliders</div>
+                </div>
+
+                <div class="slider-container-royal mt-5">
+                    <div class="slider-label-royal">
+                        <span class="slider-title-royal">Audio Mixer</span>
+                        <span class="slider-value-royal">Mixed</span>
+                    </div>
+                    
+                    <div class="slider-group-royal slider-group-horizontal">
+                        <div class="slider-control-group text-center">
+                            <div class="slider-mini-label">
+                                <span>Bass</span>
+                                <span class="slider-mini-value">70%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-vertical slider-royal-sm" value="70" min="0" max="100" orient="vertical">
+                        </div>
+                        
+                        <div class="slider-control-group text-center">
+                            <div class="slider-mini-label">
+                                <span>Mid</span>
+                                <span class="slider-mini-value">50%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-vertical slider-royal-sm slider-egyptian" value="50" min="0" max="100" orient="vertical">
+                        </div>
+                        
+                        <div class="slider-control-group text-center">
+                            <div class="slider-mini-label">
+                                <span>Treble</span>
+                                <span class="slider-mini-value">80%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-vertical slider-royal-sm slider-roman" value="80" min="0" max="100" orient="vertical">
+                        </div>
+                        
+                        <div class="slider-control-group text-center">
+                            <div class="slider-mini-label">
+                                <span>Volume</span>
+                                <span class="slider-mini-value">65%</span>
+                            </div>
+                            <input type="range" class="slider-royal slider-royal-vertical slider-royal-sm slider-renaissance" value="65" min="0" max="100" orient="vertical">
+                        </div>
+                    </div>
+                    
+                    <div class="slider-caption-royal">Professional audio controls with vertical sliders</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Additional styles for slider showcase */
+    .slider-control-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .slider-mini-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-family: var(--slider-font-royal);
+        font-size: 0.9rem;
+        color: var(--primary-wood);
+    }
+    
+    .slider-mini-value {
+        font-weight: 600;
+        color: var(--primary-gold);
+    }
+    
+    .d-flex {
+        display: flex;
+    }
+    
+    .justify-center {
+        justify-content: center;
+    }
+    
+    .align-center {
+        align-items: center;
+    }
+    
+    .gap-4 {
+        gap: 2rem;
+    }
+    
+    .text-left {
+        text-align: left;
+    }
+    
+    .justify-center {
+        justify-content: center;
+    }
+</style>
+
+<script>
+    // Slider functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Update slider values in real-time
+        const sliders = document.querySelectorAll('input[type="range"]');
+        sliders.forEach(slider => {
+            // Find the corresponding value display
+            const container = slider.closest('.slider-container-royal');
+            if (container) {
+                const valueDisplay = container.querySelector('.slider-value-royal');
+                
+                slider.addEventListener('input', function() {
+                    if (valueDisplay) {
+                        // For marked sliders, show labels instead of percentages
+                        if (slider.hasAttribute('step')) {
+                            const step = parseInt(slider.getAttribute('step'));
+                            const value = parseInt(slider.value);
+                            const marks = container.querySelectorAll('.slider-mark');
+                            
+                            marks.forEach(mark => {
+                                mark.classList.remove('active');
+                                const markValue = parseInt(mark.style.left);
+                                if (Math.abs(markValue - value) <= step/2) {
+                                    mark.classList.add('active');
+                                    valueDisplay.textContent = mark.textContent;
+                                }
+                            });
+                        } else {
+                            valueDisplay.textContent = slider.value + '%';
+                        }
+                    }
+                    
+                    // Update mini labels in slider groups
+                    const miniValue = slider.closest('.slider-control-group')?.querySelector('.slider-mini-value');
+                    if (miniValue) {
+                        miniValue.textContent = slider.value + '%';
+                    }
+                });
+            }
+        });
+        
+        // Range slider functionality
+        const rangeSliders = document.querySelectorAll('.range-slider-royal');
+        rangeSliders.forEach(rangeSlider => {
+            const thumbs = rangeSlider.querySelectorAll('.range-slider-thumb');
+            const fill = rangeSlider.querySelector('.range-slider-fill');
+            const valueDisplay = rangeSlider.closest('.slider-container-royal')?.querySelector('.slider-value-royal');
+            
+            if (thumbs.length === 2 && fill && valueDisplay) {
+                let isDragging = false;
+                let activeThumb = null;
+                
+                // Initial positions (should match the inline styles)
+                let leftPos = 30;
+                let rightPos = 70;
+                
+                function updateRangeSlider() {
+                    // Ensure left thumb is always left of right thumb
+                    if (leftPos > rightPos) {
+                        [leftPos, rightPos] = [rightPos, leftPos];
+                        [thumbs[0], thumbs[1]] = [thumbs[1], thumbs[0]];
+                    }
+                    
+                    // Update thumb positions
+                    thumbs[0].style.left = leftPos + '%';
+                    thumbs[1].style.left = rightPos + '%';
+                    
+                    // Update fill area
+                    fill.style.left = leftPos + '%';
+                    fill.style.width = (rightPos - leftPos) + '%';
+                    
+                    // Update value display
+                    if (valueDisplay) {
+                        if (rangeSlider.closest('.slider-container-royal').querySelector('.slider-title-royal').textContent.includes('Price')) {
+                            const minPrice = Math.round(10 + leftPos * 4.9);
+                            const maxPrice = Math.round(10 + rightPos * 4.9);
+                            valueDisplay.textContent = `$${minPrice} - $${maxPrice}`;
+                        } else {
+                            const minCentury = Math.round(10 + leftPos * 0.8);
+                            const maxCentury = Math.round(10 + rightPos * 0.8);
+                            valueDisplay.textContent = `${minCentury}th - ${maxCentury}th`;
+                        }
+                    }
+                }
+                
+                thumbs.forEach((thumb, index) => {
+                    thumb.addEventListener('mousedown', function(e) {
+                        isDragging = true;
+                        activeThumb = thumb;
+                        e.preventDefault();
+                    });
+                    
+                    thumb.addEventListener('touchstart', function(e) {
+                        isDragging = true;
+                        activeThumb = thumb;
+                        e.preventDefault();
+                    });
+                });
+                
+                document.addEventListener('mousemove', function(e) {
+                    if (!isDragging || !activeThumb) return;
+                    
+                    const rect = rangeSlider.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                    
+                    if (activeThumb === thumbs[0]) {
+                        leftPos = percentage;
+                    } else {
+                        rightPos = percentage;
+                    }
+                    
+                    updateRangeSlider();
+                });
+                
+                document.addEventListener('touchmove', function(e) {
+                    if (!isDragging || !activeThumb) return;
+                    
+                    const rect = rangeSlider.getBoundingClientRect();
+                    const x = e.touches[0].clientX - rect.left;
+                    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                    
+                    if (activeThumb === thumbs[0]) {
+                        leftPos = percentage;
+                    } else {
+                        rightPos = percentage;
+                    }
+                    
+                    updateRangeSlider();
+                });
+                
+                document.addEventListener('mouseup', function() {
+                    isDragging = false;
+                    activeThumb = null;
+                });
+                
+                document.addEventListener('touchend', function() {
+                    isDragging = false;
+                    activeThumb = null;
+                });
+                
+                // Initialize
+                updateRangeSlider();
+            }
+        });
+        
+        // Add animation to sliders on scroll
+        const sliderObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        document.querySelectorAll('.slider-container-royal').forEach(container => {
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            container.style.transition = 'all 0.6s ease';
+            sliderObserver.observe(container);
+        });
+    });
+</script>       
 
     <!-- Alerts Section -->
     <section class="section-royal">
