@@ -1,0 +1,796 @@
+/* testimonials.css - ULTRA MASTERPIECE Classical Professional Testimonials Framework */
+/* Version 11.0 - Supreme Excellence in Classical Testimonials Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Testimonial Colors */
+  --testimonial-bg-royal-parchment: #fefaf0;
+  --testimonial-bg-imperial-ivory: #fffaf0;
+  --testimonial-bg-gilded-velvet: #2a1810;
+  --testimonial-bg-carrara-marble: #f8f4f0;
+  --testimonial-bg-vermeil-gold: #fff8e8;
+  --testimonial-bg-sterling-silver: #fafbfc;
+  --testimonial-bg-patina-bronze: #f5f0e8;
+  --testimonial-bg-illuminated: #fffef7;
+  
+  /* 👑 ROYAL ACCENT COLORS - Palace Quality Gradients */
+  --testimonial-accent-gold: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 15%,
+      #ffdf00 30%,
+      #daa520 45%,
+      #b8860b 60%,
+      #daa520 75%,
+      #ffdf00 90%,
+      #f9e076 100%);
+  
+  --testimonial-accent-silver: 
+    linear-gradient(135deg,
+      #c0c0c0 0%,
+      #e8e8e8 15%,
+      #f0f0f0 30%,
+      #d8d8d8 45%,
+      #a9a9a9 60%,
+      #d8d8d8 75%,
+      #f0f0f0 90%,
+      #e8e8e8 100%);
+  
+  --testimonial-accent-bronze: 
+    linear-gradient(135deg,
+      #cd7f32 0%,
+      #e39d55 15%,
+      #f0b27a 30%,
+      #d18a4a 45%,
+      #a8662c 60%,
+      #d18a4a 75%,
+      #f0b27a 90%,
+      #e39d55 100%);
+
+  /* 🏛️ HISTORICAL ERA THEMES */
+  --testimonial-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 25%,
+      #b8860b 50%,
+      #8b6914 75%,
+      #b8860b 100%);
+  
+  --testimonial-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --testimonial-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --testimonial-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --testimonial-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 20%,
+      #b8860b 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #daa520 100%);
+  
+  --testimonial-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 20%,
+      #654321 40%,
+      #8b4513 60%,
+      #a0522d 80%,
+      #8b4513 100%);
+
+  /* 🏰 ARCHITECTURAL SHADOWS */
+  --testimonial-shadow-palace: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(0, 0, 0, 0.12),
+    0 32px 64px rgba(0, 0, 0, 0.08),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  
+  --testimonial-shadow-cathedral: 
+    0 12px 36px rgba(0, 0, 0, 0.2),
+    0 24px 60px rgba(0, 0, 0, 0.15),
+    0 48px 96px rgba(0, 0, 0, 0.1),
+    inset 0 3px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.3);
+  
+  --testimonial-shadow-golden: 
+    0 0 30px rgba(212, 175, 55, 0.4),
+    0 0 60px rgba(212, 175, 55, 0.3),
+    0 0 90px rgba(212, 175, 55, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* 🖋️ CALLIGRAPHY TYPOGRAPHY */
+  --testimonial-font-palace: 'Palatino Linotype', 'Book Antiqua', serif;
+  --testimonial-font-royal: 'Garamond', 'Times New Roman', serif;
+  --testimonial-font-illuminated: 'Trajan Pro', 'Charlemagne', serif;
+  --testimonial-font-manuscript: 'Apple Chancery', 'Zapfino', cursive;
+  --testimonial-font-latin: 'Latin Modern Roman', serif;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL TESTIMONIALS CONTAINER */
+.testimonials-container-royal {
+  position: relative;
+  background: var(--testimonial-bg-royal-parchment);
+  border: 3px double #8b4513;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--testimonial-shadow-palace);
+  font-family: var(--testimonial-font-royal);
+  backdrop-filter: blur(10px);
+  margin: 3rem 0;
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" opacity="0.02"><defs><pattern id="royalPattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="%238b4513"/><circle cx="95" cy="45" r="2" fill="%238b4513"/><circle cx="45" cy="95" r="2" fill="%238b4513"/></pattern></defs><rect width="120" height="120" fill="url(%23royalPattern)"/></svg>');
+  overflow: hidden;
+}
+
+.testimonials-container-royal::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.testimonials-container-royal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 🏆 CROWN JEWEL TESTIMONIAL CARD */
+.testimonial-royal {
+  position: relative;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.02"><path d="M40,15 L50,50 L30,50 Z" fill="%238b4513"/></svg>');
+  border: 2px solid #8b4513;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 
+    inset 0 3px 6px rgba(255, 255, 255, 0.8),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+    0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: var(--testimonial-font-royal);
+  animation: testimonialEntrance 0.8s var(--ease-throne);
+  overflow: hidden;
+}
+
+.testimonial-royal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--testimonial-accent-gold);
+  border-radius: 16px 16px 0 0;
+}
+
+.testimonial-royal::after {
+  content: '"';
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 6rem;
+  color: rgba(139, 69, 19, 0.1);
+  font-family: var(--testimonial-font-illuminated);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* 🎨 ROYAL TESTIMONIAL CONTENT */
+.testimonial-royal-content {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-royal-quote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a3526;
+  margin-bottom: 2rem;
+  font-style: italic;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.testimonial-royal-quote::before {
+  content: '"';
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  font-size: 4rem;
+  color: #d4af37;
+  font-family: var(--testimonial-font-illuminated);
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.testimonial-royal-author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(139, 69, 19, 0.2);
+  position: relative;
+}
+
+.testimonial-royal-author::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--testimonial-accent-gold);
+}
+
+.testimonial-royal-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  background: var(--testimonial-accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #2c1810;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-royal-avatar::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: avatarOrbit 4s linear infinite;
+}
+
+.testimonial-royal-info {
+  flex: 1;
+}
+
+.testimonial-royal-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8b4513;
+  margin-bottom: 0.5rem;
+  font-family: var(--testimonial-font-illuminated);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonial-royal-title {
+  font-size: 0.9rem;
+  color: #8b7355;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-royal-company {
+  font-size: 0.85rem;
+  color: #a0522d;
+  font-style: italic;
+}
+
+.testimonial-royal-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.testimonial-royal-star {
+  width: 20px;
+  height: 20px;
+  background: var(--testimonial-accent-gold);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: starTwinkle 2s var(--ease-royal) infinite;
+  animation-delay: calc(var(--star-index, 0) * 0.2s);
+}
+
+/* 🏛️ HISTORICAL ERA TESTIMONIALS */
+.testimonial-egyptian {
+  background: 
+    linear-gradient(135deg, #fffaf0 0%, #ffe4b5 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%23daa520"/></svg>');
+  border: 3px solid #daa520;
+}
+
+.testimonial-egyptian::before {
+  background: var(--testimonial-egyptian);
+}
+
+.testimonial-egyptian .testimonial-royal-avatar {
+  border: 3px solid #daa520;
+  background: var(--testimonial-egyptian);
+}
+
+.testimonial-greek {
+  background: 
+    linear-gradient(135deg, #f8f8ff 0%, #e6e6fa 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%234b0082"/></svg>');
+  border: 2px solid #4b0082;
+}
+
+.testimonial-greek::before {
+  background: var(--testimonial-greek);
+}
+
+.testimonial-greek .testimonial-royal-avatar {
+  border: 2px solid #4b0082;
+  background: var(--testimonial-greek);
+}
+
+.testimonial-roman {
+  background: 
+    linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%238b0000"/></svg>');
+  border: 3px solid #8b0000;
+}
+
+.testimonial-roman::before {
+  background: var(--testimonial-roman);
+}
+
+.testimonial-roman .testimonial-royal-avatar {
+  border: 3px solid #8b0000;
+  background: var(--testimonial-roman);
+  color: #fff;
+}
+
+.testimonial-renaissance {
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #f5f5dc 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M40,15 L50,50 L30,50 Z" fill="%238b4513"/></svg>');
+  border: 3px solid #8b4513;
+}
+
+.testimonial-renaissance::before {
+  background: var(--testimonial-renaissance);
+}
+
+.testimonial-renaissance .testimonial-royal-avatar {
+  border: 3px solid #8b4513;
+  background: var(--testimonial-renaissance);
+}
+
+/* 📐 ROYAL TESTIMONIAL SIZES */
+.testimonial-royal-sm {
+  padding: 1.5rem;
+}
+
+.testimonial-royal-sm .testimonial-royal-quote {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-royal-sm .testimonial-royal-avatar {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.testimonial-royal-lg {
+  padding: 3.5rem;
+}
+
+.testimonial-royal-lg .testimonial-royal-quote {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.testimonial-royal-lg .testimonial-royal-avatar {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+}
+
+.testimonial-royal-xl {
+  padding: 4.5rem;
+}
+
+.testimonial-royal-xl .testimonial-royal-quote {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-royal-xl .testimonial-royal-avatar {
+  width: 120px;
+  height: 120px;
+  font-size: 3rem;
+}
+
+/* 🎪 ROYAL TESTIMONIAL VARIANTS */
+.testimonial-royal-quote-only {
+  text-align: center;
+  padding: 3rem;
+}
+
+.testimonial-royal-quote-only .testimonial-royal-quote {
+  padding-left: 0;
+  font-size: 1.3rem;
+}
+
+.testimonial-royal-quote-only .testimonial-royal-quote::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial-royal-minimal {
+  background: transparent;
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  box-shadow: none;
+  backdrop-filter: blur(20px);
+}
+
+.testimonial-royal-minimal::before,
+.testimonial-royal-minimal::after {
+  display: none;
+}
+
+.testimonial-royal-featured {
+  border: 4px double #d4af37;
+  box-shadow: var(--testimonial-shadow-golden);
+  position: relative;
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.testimonial-royal-featured::before {
+  height: 6px;
+}
+
+/* 🏆 ROYAL TESTIMONIAL GRID */
+.testimonials-grid-royal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.testimonials-grid-royal-compact {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonials-grid-royal-grand {
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2.5rem;
+}
+
+/* 🎠 ROYAL TESTIMONIAL CAROUSEL */
+.testimonials-carousel-royal {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 3rem 0;
+}
+
+.testimonials-carousel-track {
+  display: flex;
+  transition: transform 0.8s var(--ease-throne);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.testimonial-carousel-item {
+  flex: 0 0 calc(33.333% - 1.33rem);
+  min-width: 0;
+}
+
+.testimonials-carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.testimonial-carousel-btn {
+  width: 50px;
+  height: 50px;
+  background: var(--testimonial-accent-gold);
+  border: 2px solid #8b4513;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-coronation);
+  font-size: 1.25rem;
+  color: #2c1810;
+  box-shadow: var(--testimonial-shadow-palace);
+}
+
+.testimonial-carousel-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--testimonial-shadow-golden);
+}
+
+.testimonial-carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.testimonial-carousel-dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(139, 69, 19, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-scepter);
+}
+
+.testimonial-carousel-dot.active {
+  background: var(--testimonial-accent-gold);
+  transform: scale(1.2);
+}
+
+/* 🎭 ROYAL TESTIMONIAL ANIMATIONS */
+@keyframes testimonialEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes avatarOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes quoteFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes testimonialGlow {
+  0%, 100% {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.8),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+      0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.8),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+      0 6px 20px rgba(0, 0, 0, 0.15),
+      0 0 30px rgba(212, 175, 55, 0.2);
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.testimonial-animate-float {
+  animation: testimonialEntrance 0.8s var(--ease-throne), quoteFloat 3s var(--ease-orb) infinite;
+}
+
+.testimonial-animate-glow {
+  animation: testimonialEntrance 0.8s var(--ease-throne), testimonialGlow 2s var(--ease-royal) infinite;
+}
+
+.testimonial-animate-stagger > * {
+  animation: testimonialEntrance 0.8s var(--ease-throne) forwards;
+  opacity: 0;
+}
+
+.testimonial-animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.testimonial-animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* 📱 RESPONSIVE ROYAL TESTIMONIALS */
+@media (max-width: 1200px) {
+  .testimonials-container-royal {
+    padding: 2.5rem;
+  }
+  
+  .testimonials-grid-royal {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .testimonial-carousel-item {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-container-royal {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .testimonial-royal {
+    padding: 2rem;
+  }
+  
+  .testimonials-grid-royal {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .testimonial-carousel-item {
+    flex: 0 0 100%;
+  }
+  
+  .testimonial-royal-author {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .testimonial-royal-author::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-container-royal {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .testimonial-royal {
+    padding: 1.5rem;
+  }
+  
+  .testimonial-royal-quote {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  .testimonial-royal-quote::before {
+    font-size: 3rem;
+    left: -0.5rem;
+  }
+  
+  .testimonial-royal-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 1.75rem;
+  }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .testimonials-container-royal {
+    background: #1a1208;
+    color: #f8f4e9;
+  }
+  
+  .testimonial-royal {
+    background: 
+      linear-gradient(135deg, #2a1f10 0%, #1a1208 100%);
+    color: #f8f4e9;
+  }
+  
+  .testimonial-royal-quote {
+    color: #d4c6b8;
+  }
+  
+  .testimonial-royal-name {
+    color: #f9e076;
+  }
+}
+
+/* ♿ ROYAL ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-royal,
+  .testimonial-royal-avatar::before,
+  .testimonial-royal-star,
+  .testimonials-carousel-track {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .testimonial-royal {
+    border-width: 3px;
+  }
+  
+  .testimonial-royal::before {
+    height: 6px;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .testimonials-container-royal {
+    background: white !important;
+    color: black !important;
+    border: 3px double black !important;
+    box-shadow: none !important;
+  }
+  
+  .testimonial-royal {
+    background: white !important;
+    border: 2px solid black !important;
+    box-shadow: none !important;
+  }
+  
+  .testimonial-royal::before {
+    background: #333 !important;
+  }
+}
