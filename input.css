@@ -1,0 +1,774 @@
+/* input.css - ULTRA MASTERPIECE Classical Professional Input Framework */
+/* Version 12.0 - Supreme Excellence in Classical Input Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Input Colors */
+  --input-bg-royal-parchment: #fefaf0;
+  --input-bg-imperial-ivory: #fffaf0;
+  --input-bg-gilded-velvet: #2a1810;
+  --input-bg-carrara-marble: #f8f4f0;
+  --input-bg-vermeil-gold: #fff8e8;
+  --input-bg-sterling-silver: #fafbfc;
+  --input-bg-patina-bronze: #f5f0e8;
+  --input-bg-illuminated: #fffef7;
+  
+  /* 👑 ROYAL INPUT STATES - Palace Quality Colors */
+  --input-accent-gold: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 15%,
+      #ffdf00 30%,
+      #daa520 45%,
+      #b8860b 60%,
+      #daa520 75%,
+      #ffdf00 90%,
+      #f9e076 100%);
+  
+  --input-accent-silver: 
+    linear-gradient(135deg,
+      #c0c0c0 0%,
+      #e8e8e8 15%,
+      #f0f0f0 30%,
+      #d8d8d8 45%,
+      #a9a9a9 60%,
+      #d8d8d8 75%,
+      #f0f0f0 90%,
+      #e8e8e8 100%);
+  
+  --input-accent-bronze: 
+    linear-gradient(135deg,
+      #cd7f32 0%,
+      #e39d55 15%,
+      #f0b27a 30%,
+      #d18a4a 45%,
+      #a8662c 60%,
+      #d18a4a 75%,
+      #f0b27a 90%,
+      #e39d55 100%);
+
+  /* 🏛️ HISTORICAL ERA INPUTS */
+  --input-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 25%,
+      #b8860b 50%,
+      #8b6914 75%,
+      #b8860b 100%);
+  
+  --input-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --input-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --input-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --input-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 20%,
+      #b8860b 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #daa520 100%);
+  
+  --input-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 20%,
+      #654321 40%,
+      #8b4513 60%,
+      #a0522d 80%,
+      #8b4513 100%);
+
+  /* 🏰 ARCHITECTURAL SHADOWS */
+  --input-shadow-palace: 
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    0 16px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  
+  --input-shadow-cathedral: 
+    0 6px 20px rgba(0, 0, 0, 0.18),
+    0 12px 28px rgba(0, 0, 0, 0.15),
+    0 24px 48px rgba(0, 0, 0, 0.12),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  
+  --input-shadow-golden: 
+    0 0 20px rgba(212, 175, 55, 0.4),
+    0 0 40px rgba(212, 175, 55, 0.3),
+    0 0 60px rgba(212, 175, 55, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.15);
+
+  /* 🖋️ CALLIGRAPHY TYPOGRAPHY */
+  --input-font-palace: 'Palatino Linotype', 'Book Antiqua', serif;
+  --input-font-royal: 'Garamond', 'Times New Roman', serif;
+  --input-font-illuminated: 'Trajan Pro', 'Charlemagne', serif;
+  --input-font-manuscript: 'Apple Chancery', 'Zapfino', cursive;
+  --input-font-latin: 'Latin Modern Roman', serif;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL INPUT CONTAINER */
+.input-container-royal {
+  position: relative;
+  background: var(--input-bg-royal-parchment);
+  border: 3px double #8b4513;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--input-shadow-palace);
+  font-family: var(--input-font-royal);
+  backdrop-filter: blur(10px);
+  margin: 2rem 0;
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><defs><pattern id="royalPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%238b4513"/><circle cx="80" cy="40" r="2" fill="%238b4513"/><circle cx="40" cy="80" r="2" fill="%238b4513"/></pattern></defs><rect width="100" height="100" fill="url(%23royalPattern)"/></svg>');
+  overflow: hidden;
+}
+
+.input-container-royal::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.input-container-royal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 🏆 CROWN JEWEL INPUT BASE */
+.input-royal {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--input-font-royal);
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><rect width="60" height="60" fill="%238b4513"/></svg>');
+  border: 2px solid #8b4513;
+  border-radius: 8px;
+  color: #2c1810;
+  transition: all 0.4s var(--ease-coronation);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  animation: inputEntrance 0.6s var(--ease-throne);
+}
+
+.input-royal::placeholder {
+  color: #8b7355;
+  font-style: italic;
+  font-family: var(--input-font-manuscript);
+}
+
+.input-royal:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 3px rgba(212, 175, 55, 0.2),
+    0 0 20px rgba(212, 175, 55, 0.1);
+  transform: translateY(-1px);
+  background: 
+    linear-gradient(135deg, #fffef7 0%, #fffaf0 100%);
+}
+
+.input-royal:focus::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid var(--input-accent-gold);
+  border-radius: 10px;
+  pointer-events: none;
+  animation: inputFocusGlow 2s var(--ease-royal) infinite;
+}
+
+/* 🎨 ROYAL INPUT VARIANTS */
+.input-royal-success {
+  border-color: #059669;
+  background: 
+    linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+}
+
+.input-royal-success:focus {
+  border-color: #10b981;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.input-royal-warning {
+  border-color: #d97706;
+  background: 
+    linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.input-royal-warning:focus {
+  border-color: #f59e0b;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.input-royal-error {
+  border-color: #dc2626;
+  background: 
+    linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+.input-royal-error:focus {
+  border-color: #ef4444;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* 🏛️ HISTORICAL ERA INPUTS */
+.input-egyptian {
+  background: 
+    linear-gradient(135deg, #fffaf0 0%, #ffe4b5 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%23daa520"/></svg>');
+  border: 3px solid #daa520;
+  font-family: var(--input-font-illuminated);
+}
+
+.input-egyptian:focus {
+  border-color: #ffd700;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.input-greek {
+  background: 
+    linear-gradient(135deg, #f8f8ff 0%, #e6e6fa 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%234b0082"/></svg>');
+  border: 2px solid #4b0082;
+  font-family: var(--input-font-latin);
+}
+
+.input-greek:focus {
+  border-color: #6a5acd;
+}
+
+.input-roman {
+  background: 
+    linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%238b0000"/></svg>');
+  border: 3px solid #8b0000;
+  font-family: var(--input-font-illuminated);
+  color: #2c1810;
+}
+
+.input-roman:focus {
+  border-color: #b22222;
+}
+
+.input-renaissance {
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #f5f5dc 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.02"><path d="M30,10 L40,40 L20,40 Z" fill="%238b4513"/></svg>');
+  border: 3px solid #8b4513;
+  font-family: var(--input-font-manuscript);
+}
+
+.input-renaissance:focus {
+  border-color: #a0522d;
+}
+
+/* 📐 ROYAL INPUT SIZES */
+.input-royal-sm {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+}
+
+.input-royal-lg {
+  padding: 1.25rem 1.75rem;
+  font-size: 1.125rem;
+  border-radius: 10px;
+}
+
+.input-royal-xl {
+  padding: 1.5rem 2rem;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  border-width: 3px;
+}
+
+/* 🎪 ROYAL INPUT STYLES */
+.input-royal-outline {
+  background: transparent;
+  border: 2px solid #8b4513;
+  box-shadow: none;
+}
+
+.input-royal-outline:focus {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 0 0 3px rgba(212, 175, 55, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.input-royal-ghost {
+  background: rgba(139, 69, 19, 0.05);
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  box-shadow: none;
+  backdrop-filter: blur(10px);
+}
+
+.input-royal-ghost:focus {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: #d4af37;
+  box-shadow: 
+    0 0 0 3px rgba(212, 175, 55, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.input-royal-pill {
+  border-radius: 50px;
+}
+
+.input-royal-pill:focus::before {
+  border-radius: 52px;
+}
+
+/* 🏆 ROYAL INPUT WITH ICONS */
+.input-group-royal {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-royal {
+  position: absolute;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #8b4513;
+  z-index: 2;
+  transition: all 0.3s var(--ease-scepter);
+}
+
+.input-royal-with-icon {
+  padding-left: 3rem;
+}
+
+.input-royal:focus ~ .input-icon-royal {
+  color: #d4af37;
+  transform: scale(1.1);
+  animation: iconPulse 1s var(--ease-crown) infinite;
+}
+
+.input-group-royal-right .input-icon-royal {
+  left: auto;
+  right: 1rem;
+}
+
+.input-group-royal-right .input-royal-with-icon {
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+}
+
+/* 🎨 ROYAL TEXTAREA */
+.textarea-royal {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+  font-family: var(--input-font-royal);
+}
+
+.textarea-royal-lg {
+  min-height: 160px;
+}
+
+.textarea-royal-xl {
+  min-height: 200px;
+}
+
+/* 🏰 ROYAL SELECT INPUT */
+.select-royal {
+  appearance: none;
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238b4513" width="18" height="18"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 3rem;
+}
+
+.select-royal:focus {
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37" width="18" height="18"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+
+/* 📊 ROYAL INPUT GROUP */
+.input-group-royal-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group-royal-horizontal {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.input-group-royal-horizontal .input-field-royal {
+  flex: 1;
+}
+
+/* 🎭 ROYAL INPUT ANIMATIONS */
+@keyframes inputEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes inputFocusGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes inputSuccess {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.input-animate-glow:focus {
+  animation: inputFocusGlow 2s var(--ease-royal) infinite;
+}
+
+.input-animate-success {
+  background: linear-gradient(-45deg, #f0fff4, #e6ffed, #d1fae5, #e6ffed);
+  background-size: 400% 400%;
+  animation: inputSuccess 3s var(--ease-coronation) infinite;
+}
+
+.input-animate-float {
+  transition: all 0.4s var(--ease-throne);
+}
+
+.input-animate-float:focus {
+  transform: translateY(-2px);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* 🏆 ROYAL INPUT LABELS */
+.input-field-royal {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.input-label-royal {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8b4513;
+  margin-bottom: 0.75rem;
+  font-family: var(--input-font-illuminated);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.input-label-royal::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--input-accent-gold);
+  transition: width 0.4s var(--ease-coronation);
+}
+
+.input-field-royal:focus-within .input-label-royal::after {
+  width: 100%;
+}
+
+.input-helper-royal {
+  font-size: 0.8rem;
+  color: #8b7355;
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-family: var(--input-font-manuscript);
+}
+
+.input-counter-royal {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.75rem;
+  color: #8b7355;
+  font-family: var(--input-font-latin);
+}
+
+/* 🎯 ROYAL FLOATING LABELS */
+.input-floating-royal {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.input-floating-royal .input-royal {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.input-floating-royal .input-label-royal {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  margin: 0;
+  pointer-events: none;
+  transition: all 0.3s var(--ease-scepter);
+  background: linear-gradient(to bottom, #fefaf0, #fff8e8);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+}
+
+.input-floating-royal .input-royal:focus ~ .input-label-royal,
+.input-floating-royal .input-royal:not(:placeholder-shown) ~ .input-label-royal {
+  top: -0.5rem;
+  left: 1rem;
+  font-size: 0.75rem;
+  color: #d4af37;
+  background: var(--input-accent-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 📱 RESPONSIVE ROYAL INPUTS */
+@media (max-width: 1200px) {
+  .input-container-royal {
+    padding: 2rem;
+  }
+  
+  .input-group-royal-horizontal {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-container-royal {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .input-royal {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .input-royal-lg {
+    padding: 1rem 1.5rem;
+  }
+  
+  .input-royal-xl {
+    padding: 1.25rem 1.75rem;
+  }
+  
+  .input-icon-royal {
+    width: 1rem;
+    height: 1rem;
+    left: 0.875rem;
+  }
+  
+  .input-royal-with-icon {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-container-royal {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .input-royal {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .input-label-royal {
+    font-size: 0.8rem;
+  }
+  
+  .input-floating-royal .input-label-royal {
+    left: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .input-container-royal {
+    background: #1a1208;
+    color: #f8f4e9;
+  }
+  
+  .input-royal {
+    background: 
+      linear-gradient(135deg, #2a1f10 0%, #1a1208 100%);
+    color: #f8f4e9;
+    border-color: #5d4037;
+  }
+  
+  .input-royal::placeholder {
+    color: #8b7355;
+  }
+  
+  .input-label-royal {
+    color: #f9e076;
+  }
+  
+  .input-royal-outline {
+    background: transparent;
+    color: #f8f4e9;
+  }
+  
+  .input-royal-ghost {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.3);
+    color: #f8f4e9;
+  }
+}
+
+/* ♿ ROYAL ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .input-royal,
+  .input-icon-royal,
+  .input-label-royal {
+    transition: none;
+    animation: none;
+  }
+  
+  .input-royal:focus::before {
+    display: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .input-royal {
+    border-width: 3px;
+  }
+  
+  .input-royal:focus {
+    border-width: 4px;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .input-container-royal {
+    background: white !important;
+    color: black !important;
+    border: 3px double black !important;
+    box-shadow: none !important;
+  }
+  
+  .input-royal {
+    background: white !important;
+    border: 2px solid black !important;
+    box-shadow: none !important;
+    color: black !important;
+  }
+  
+  .input-royal::placeholder {
+    color: #666 !important;
+  }
+}
