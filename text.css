@@ -1,0 +1,730 @@
+/* text.css - ULTRA MASTERPIECE Classical Professional Typography Framework */
+/* Version 14.0 - Supreme Excellence in Classical Text Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Text Colors */
+  --text-gold-primary: #d4af37;
+  --text-gold-secondary: #f9e076;
+  --text-gold-accent: #ffdf00;
+  --text-velvet-primary: #2c1810;
+  --text-velvet-secondary: #4a3526;
+  --text-parchment-primary: #fefaf0;
+  --text-parchment-secondary: #fff8e8;
+  --text-ink-primary: #2c1810;
+  --text-ink-secondary: #4a3526;
+  --text-ink-muted: #8b7355;
+  
+  /* 👑 ROYAL GRADIENTS - Palace Quality Text Effects */
+  --text-gradient-gold: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 25%,
+      #ffdf00 50%,
+      #f9e076 75%,
+      #d4af37 100%);
+  
+  --text-gradient-silver: 
+    linear-gradient(135deg,
+      #c0c0c0 0%,
+      #e8e8e8 25%,
+      #f0f0f0 50%,
+      #e8e8e8 75%,
+      #c0c0c0 100%);
+  
+  --text-gradient-bronze: 
+    linear-gradient(135deg,
+      #cd7f32 0%,
+      #e39d55 25%,
+      #f0b27a 50%,
+      #e39d55 75%,
+      #cd7f32 100%);
+
+  /* 🏛️ HISTORICAL ERA TEXT THEMES */
+  --text-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 25%,
+      #b8860b 50%,
+      #8b6914 75%,
+      #b8860b 100%);
+  
+  --text-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --text-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --text-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --text-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 20%,
+      #b8860b 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #daa520 100%);
+  
+  --text-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 20%,
+      #654321 40%,
+      #8b4513 60%,
+      #a0522d 80%,
+      #8b4513 100%);
+
+  /* 🏰 TEXT SHADOWS & EFFECTS */
+  --text-shadow-royal: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  
+  --text-shadow-golden: 
+    0 0 10px rgba(212, 175, 55, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.3),
+    0 0 30px rgba(212, 175, 55, 0.2);
+  
+  --text-shadow-embossed: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+
+  /* 🖋️ ROYAL FONT FAMILIES */
+  --font-royal-serif: 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+  --font-royal-display: 'Trajan Pro', 'Charlemagne', 'Goudy Old Style', serif;
+  --font-royal-script: 'Apple Chancery', 'Zapfino', 'Brush Script MT', cursive;
+  --font-royal-monospace: 'Courier New', 'Lucida Console', monospace;
+  --font-royal-latin: 'Latin Modern Roman', 'Garamond', serif;
+  --font-royal-illuminated: 'UnifrakturMaguntia', 'Blackletter', fantasy;
+
+  /* 📐 ROYAL TYPOGRAPHY SCALE */
+  --text-scale-xs: 0.75rem;
+  --text-scale-sm: 0.875rem;
+  --text-scale-base: 1rem;
+  --text-scale-lg: 1.125rem;
+  --text-scale-xl: 1.25rem;
+  --text-scale-2xl: 1.5rem;
+  --text-scale-3xl: 1.875rem;
+  --text-scale-4xl: 2.25rem;
+  --text-scale-5xl: 3rem;
+  --text-scale-6xl: 3.75rem;
+  --text-scale-7xl: 4.5rem;
+  --text-scale-8xl: 6rem;
+  --text-scale-9xl: 8rem;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL TEXT CONTAINER */
+.text-container-royal {
+  position: relative;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.02"><defs><pattern id="parchment" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%238b4513"/><circle cx="80" cy="40" r="1" fill="%238b4513"/><circle cx="40" cy="80" r="1" fill="%238b4513"/></pattern></defs><rect width="100" height="100" fill="url(%23parchment)"/></svg>');
+  border: 3px double #8b4513;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(0, 0, 0, 0.12),
+    0 32px 64px rgba(0, 0, 0, 0.08),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  font-family: var(--font-royal-serif);
+  backdrop-filter: blur(10px);
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+.text-container-royal::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.text-container-royal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 🏆 CROWN JEWEL HEADINGS */
+.h1-royal {
+  font-size: var(--text-scale-6xl);
+  font-family: var(--font-royal-display);
+  font-weight: 700;
+  color: var(--text-velvet-primary);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  position: relative;
+  text-shadow: var(--text-shadow-royal);
+  animation: textEntrance 0.8s var(--ease-throne);
+}
+
+.h1-royal::before {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--text-gradient-gold);
+  border-radius: 2px;
+  animation: underlineExpand 1s var(--ease-coronation) 0.5s both;
+}
+
+.h2-royal {
+  font-size: var(--text-scale-5xl);
+  font-family: var(--font-royal-display);
+  font-weight: 600;
+  color: var(--text-velvet-primary);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-shadow: var(--text-shadow-royal);
+  animation: textEntrance 0.8s var(--ease-throne) 0.1s both;
+}
+
+.h3-royal {
+  font-size: var(--text-scale-4xl);
+  font-family: var(--font-royal-serif);
+  font-weight: 600;
+  color: var(--text-velvet-secondary);
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+  animation: textEntrance 0.8s var(--ease-throne) 0.2s both;
+}
+
+.h4-royal {
+  font-size: var(--text-scale-3xl);
+  font-family: var(--font-royal-serif);
+  font-weight: 500;
+  color: var(--text-velvet-secondary);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  animation: textEntrance 0.8s var(--ease-throne) 0.3s both;
+}
+
+.h5-royal {
+  font-size: var(--text-scale-2xl);
+  font-family: var(--font-royal-serif);
+  font-weight: 500;
+  color: var(--text-ink-primary);
+  line-height: 1.4;
+  margin-bottom: 0.875rem;
+  animation: textEntrance 0.8s var(--ease-throne) 0.4s both;
+}
+
+.h6-royal {
+  font-size: var(--text-scale-xl);
+  font-family: var(--font-royal-serif);
+  font-weight: 500;
+  color: var(--text-ink-secondary);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: textEntrance 0.8s var(--ease-throne) 0.5s both;
+}
+
+/* 📜 ROYAL BODY TEXT */
+.p-royal {
+  font-size: var(--text-scale-base);
+  font-family: var(--font-royal-serif);
+  color: var(--text-ink-primary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  animation: textEntrance 0.8s var(--ease-throne) 0.6s both;
+}
+
+.p-royal-lg {
+  font-size: var(--text-scale-lg);
+  line-height: 1.8;
+}
+
+.p-royal-sm {
+  font-size: var(--text-scale-sm);
+  line-height: 1.6;
+}
+
+.lead-royal {
+  font-size: var(--text-scale-xl);
+  font-family: var(--font-royal-serif);
+  color: var(--text-ink-secondary);
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: textEntrance 0.8s var(--ease-throne) 0.7s both;
+}
+
+/* 🎨 ROYAL TEXT VARIANTS */
+.text-gold {
+  background: var(--text-gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.text-silver {
+  background: var(--text-gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.text-bronze {
+  background: var(--text-gradient-bronze);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.text-embossed {
+  color: transparent;
+  background: 
+    linear-gradient(135deg, #666 0%, #fff 50%, #666 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: var(--text-shadow-embossed);
+}
+
+.text-illuminated {
+  font-family: var(--font-royal-illuminated);
+  color: var(--text-gold-primary);
+  text-shadow: 
+    0 0 10px rgba(212, 175, 55, 0.5),
+    0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.text-script {
+  font-family: var(--font-royal-script);
+  font-size: calc(var(--text-scale-base) * 1.2);
+  color: var(--text-ink-primary);
+}
+
+.text-monospace {
+  font-family: var(--font-royal-monospace);
+  background: rgba(139, 69, 19, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+/* 🏛️ HISTORICAL ERA TEXT STYLES */
+.text-egyptian {
+  font-family: var(--font-royal-display);
+  background: var(--text-egyptian);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  position: relative;
+}
+
+.text-egyptian::before {
+  content: '𓂀';
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+
+.text-greek {
+  font-family: var(--font-royal-latin);
+  background: var(--text-greek);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+.text-roman {
+  font-family: var(--font-royal-display);
+  color: var(--text-velvet-primary);
+  text-shadow: 
+    2px 2px 0px rgba(139, 0, 0, 0.3),
+    4px 4px 0px rgba(139, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.text-renaissance {
+  font-family: var(--font-royal-script);
+  color: var(--text-ink-primary);
+  font-size: calc(var(--text-scale-base) * 1.1);
+  text-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.8),
+    0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.text-baroque {
+  font-family: var(--font-royal-illuminated);
+  color: var(--text-gold-primary);
+  text-shadow: 
+    0 0 10px rgba(212, 175, 55, 0.6),
+    0 0 20px rgba(212, 175, 55, 0.4),
+    0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+/* 📐 ROYAL TEXT SIZES */
+.text-xs { font-size: var(--text-scale-xs); }
+.text-sm { font-size: var(--text-scale-sm); }
+.text-base { font-size: var(--text-scale-base); }
+.text-lg { font-size: var(--text-scale-lg); }
+.text-xl { font-size: var(--text-scale-xl); }
+.text-2xl { font-size: var(--text-scale-2xl); }
+.text-3xl { font-size: var(--text-scale-3xl); }
+.text-4xl { font-size: var(--text-scale-4xl); }
+.text-5xl { font-size: var(--text-scale-5xl); }
+.text-6xl { font-size: var(--text-scale-6xl); }
+.text-7xl { font-size: var(--text-scale-7xl); }
+.text-8xl { font-size: var(--text-scale-8xl); }
+.text-9xl { font-size: var(--text-scale-9xl); }
+
+/* 🎪 ROYAL TEXT STYLES */
+.text-italic { font-style: italic; }
+.text-underline { 
+  text-decoration: underline;
+  text-decoration-color: var(--text-gold-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.text-uppercase { text-transform: uppercase; letter-spacing: 1px; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-justify { text-align: justify; }
+
+/* 🏆 ROYAL TEXT WEIGHTS */
+.text-thin { font-weight: 100; }
+.text-light { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-medium { font-weight: 500; }
+.text-semibold { font-weight: 600; }
+.text-bold { font-weight: 700; }
+.text-extrabold { font-weight: 800; }
+.text-black { font-weight: 900; }
+
+/* 📊 ROYAL TEXT LAYOUT */
+.text-columns-2 {
+  column-count: 2;
+  column-gap: 3rem;
+  column-rule: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.text-columns-3 {
+  column-count: 3;
+  column-gap: 2rem;
+  column-rule: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.text-indent {
+  text-indent: 2rem;
+}
+
+.text-dropcap::first-letter {
+  initial-letter: 3;
+  font-family: var(--font-royal-illuminated);
+  color: var(--text-gold-primary);
+  background: var(--text-gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-right: 0.5rem;
+  margin-right: 0.25rem;
+  float: left;
+  line-height: 1;
+  font-size: 4em;
+}
+
+/* 🎭 ROYAL TEXT ANIMATIONS */
+@keyframes textEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes underlineExpand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: var(--text-shadow-royal);
+  }
+  50% {
+    text-shadow: var(--text-shadow-golden);
+  }
+}
+
+@keyframes textFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes textReveal {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.text-animate-glow {
+  animation: textEntrance 0.8s var(--ease-throne), textGlow 2s var(--ease-royal) infinite;
+}
+
+.text-animate-float {
+  animation: textEntrance 0.8s var(--ease-throne), textFloat 3s var(--ease-orb) infinite;
+}
+
+.text-animate-reveal {
+  animation: textReveal 1.2s var(--ease-throne) forwards;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.text-animate-stagger > * {
+  animation: textEntrance 0.8s var(--ease-throne) forwards;
+  opacity: 0;
+}
+
+.text-animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.text-animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.text-animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.text-animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.text-animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* 📜 ROYAL LISTS */
+.list-royal {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.list-item-royal {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-royal-serif);
+  color: var(--text-ink-primary);
+  line-height: 1.6;
+  animation: textEntrance 0.8s var(--ease-throne) 0.8s both;
+}
+
+.list-item-royal::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--text-gold-primary);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.list-royal-ordered {
+  counter-reset: royal-counter;
+}
+
+.list-royal-ordered .list-item-royal {
+  padding-left: 2.5rem;
+}
+
+.list-royal-ordered .list-item-royal::before {
+  content: counter(royal-counter);
+  counter-increment: royal-counter;
+  background: var(--text-gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  width: 2rem;
+  text-align: center;
+}
+
+/* 📱 RESPONSIVE ROYAL TYPOGRAPHY */
+@media (max-width: 1200px) {
+  .text-container-royal {
+    padding: 2.5rem;
+  }
+  
+  .h1-royal { font-size: var(--text-scale-5xl); }
+  .h2-royal { font-size: var(--text-scale-4xl); }
+  .h3-royal { font-size: var(--text-scale-3xl); }
+  .h4-royal { font-size: var(--text-scale-2xl); }
+  
+  .text-columns-2,
+  .text-columns-3 {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container-royal {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .h1-royal { font-size: var(--text-scale-4xl); }
+  .h2-royal { font-size: var(--text-scale-3xl); }
+  .h3-royal { font-size: var(--text-scale-2xl); }
+  .h4-royal { font-size: var(--text-scale-xl); }
+  .h5-royal { font-size: var(--text-scale-lg); }
+  .h6-royal { font-size: var(--text-scale-base); }
+  
+  .lead-royal { font-size: var(--text-scale-lg); }
+  
+  .text-7xl, .text-8xl, .text-9xl {
+    font-size: var(--text-scale-6xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container-royal {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .h1-royal { font-size: var(--text-scale-3xl); }
+  .h2-royal { font-size: var(--text-scale-2xl); }
+  .h3-royal { font-size: var(--text-scale-xl); }
+  .h4-royal { font-size: var(--text-scale-lg); }
+  
+  .p-royal { font-size: var(--text-scale-sm); }
+  .lead-royal { font-size: var(--text-scale-base); }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .text-container-royal {
+    background: 
+      linear-gradient(135deg, #1a1208 0%, #2a1810 100%);
+    color: #f8f4e9;
+    border-color: #5d4037;
+  }
+  
+  .h1-royal,
+  .h2-royal,
+  .h3-royal,
+  .h4-royal,
+  .h5-royal,
+  .h6-royal {
+    color: #f8f4e9;
+  }
+  
+  .p-royal,
+  .lead-royal,
+  .list-item-royal {
+    color: #d4c6b8;
+  }
+  
+  .text-embossed {
+    background: 
+      linear-gradient(135deg, #888 0%, #fff 50%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* ♿ ROYAL ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .text-container-royal * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .text-gold,
+  .text-silver,
+  .text-bronze,
+  .text-embossed {
+    -webkit-text-fill-color: #000;
+    background: none;
+    text-shadow: none;
+  }
+  
+  .h1-royal::before {
+    background: #000;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .text-container-royal {
+    background: white !important;
+    color: black !important;
+    border: 3px double black !important;
+    box-shadow: none !important;
+  }
+  
+  .text-gold,
+  .text-silver,
+  .text-bronze,
+  .text-embossed {
+    -webkit-text-fill-color: black !important;
+    background: none !important;
+    text-shadow: none !important;
+  }
+  
+  .h1-royal::before {
+    background: black !important;
+  }
+}
