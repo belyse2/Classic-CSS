@@ -17,6 +17,8 @@ This documentation provides a comprehensive and deeply detailed explanation of t
   - [Alerts](#alerts)
   - [Badges](#badges)
   - [Sliders](#sliders)
+  - [Input](#input)
+  - [Text](#text)
   - [Testimonials](#testimonials)
 - [Global Design Tokens](#global-design-tokens)
 - [Responsive Design](#responsive-design)
@@ -392,6 +394,232 @@ Each module includes media queries for:
 - Animation classes are available for all modules, e.g.:
   - `.animate-float`, `.animate-glow`, `.animate-spin`, `.animate-stagger`, `.animate-border-flow`, `.animate-pulse`
   - Keyframes provide entrance, glow, float, shake, typewriter, highlight, and more.
+  - 
+
+
+
+
+
+
+## input.css -
+
+### Custom Properties (CSS Variables)
+
+#### Color Palette
+
+- Museum-grade backgrounds: `--input-bg-royal-parchment`, `--input-bg-imperial-ivory`, `--input-bg-gilded-velvet`, `--input-bg-carrara-marble`, `--input-bg-vermeil-gold`, `--input-bg-sterling-silver`, `--input-bg-patina-bronze`, `--input-bg-illuminated`
+- Stateful accent gradients: `--input-accent-gold`, `--input-accent-silver`, `--input-accent-bronze`
+- History-themed gradients: `--input-egyptian`, `--input-greek`, `--input-roman`, `--input-medieval`, `--input-renaissance`, `--input-baroque`
+
+#### Shadows
+
+- Palace, cathedral, and golden shadow presets for layered effects: `--input-shadow-palace`, `--input-shadow-cathedral`, `--input-shadow-golden`
+
+#### Typography
+
+- Various classical font families: `--input-font-palace`, `--input-font-royal`, `--input-font-illuminated`, `--input-font-manuscript`, `--input-font-latin`
+
+#### Animation Timing Functions
+
+- Multiple ease presets for natural movement: `--ease-royal`, `--ease-crown`, `--ease-throne`, `--ease-scepter`, `--ease-orb`, `--ease-coronation`
+
+---
+
+### Main Classes
+
+#### Input Container
+
+- `.input-container-royal`: Large, bordered, shadowed container for groups of inputs, with classical background SVG parchment pattern and glow overlays.
+
+#### Input Base
+
+- `.input-royal`: Main input style. Includes background gradients, "engraved" border, deep shadows, classical font, animated entrance and focus effects.
+- Placeholder uses a calligraphic font and subdued color.
+
+#### Input Focus
+
+- Gold border and glow, animated border effect on focus.
+- Uses a pseudo-element for the glowing animated border.
+
+#### Status Variants
+
+- `.input-royal-success`, `.input-royal-warning`, `.input-royal-error`: Change border/background for "success", "warning", and "error" states. On focus, border and glow use state color.
+
+#### Historical Variants
+
+- `.input-egyptian`, `.input-greek`, `.input-roman`, `.input-renaissance`: Themed backgrounds, borders, and fonts for historical eras.
+
+#### Sizing
+
+- `.input-royal-sm`, `.input-royal-lg`, `.input-royal-xl`: Padding, font size, border-radius, and sometimes border thickness are adjusted for small, large, and extra-large inputs.
+
+#### Style Variants
+
+- `.input-royal-outline`: Transparent background, solid border.
+- `.input-royal-ghost`: Subtle colored background, faint border, blurred background, minimal style.
+- `.input-royal-pill`: Fully rounded, pill-shaped input.
+
+#### Icon Support
+
+- `.input-group-royal`: Flex container for input + icon.
+- `.input-icon-royal`: Absolutely positioned icon (usually left), color and scale animate on input focus.
+- `.input-royal-with-icon`: Extra left padding for icon space.
+- `.input-group-royal-right`: For right-aligned icons.
+
+#### Textarea
+
+- `.textarea-royal`, `.textarea-royal-lg`, `.textarea-royal-xl`: Styled multi-line text fields, with size variants.
+
+#### Select
+
+- `.select-royal`: Custom dropdown arrow using SVG, styled focus state.
+
+#### Input Groups
+
+- `.input-group-royal-stacked`: Vertical stack of inputs.
+- `.input-group-royal-horizontal`: Horizontal arrangement (becomes vertical on smaller screens).
+
+#### Animation Utility Classes
+
+- `.input-animate-glow`: Infinite border glow on focus.
+- `.input-animate-success`: Animated background for success state.
+- `.input-animate-float`: Slight float and glow on focus.
+
+#### Labels, Helpers, Counters
+
+- `.input-label-royal`: Uppercase, bold, decorated label with animated gold underline on focus.
+- `.input-helper-royal`: Italic, subtle helper text.
+- `.input-counter-royal`: Character counter, absolutely positioned.
+
+#### Floating Label Pattern
+
+- `.input-floating-royal`: Label floats above input on focus or when value is present, using transitions and background gradients.
+
+---
+
+### Responsiveness
+
+- Padding, font size, and spacing scale down at 1200px, 768px, and 480px breakpoints.
+- Icons and labels scale for mobile.
+
+---
+
+### Dark Mode
+
+- Adapts backgrounds, borders, font colors for dark themes using `prefers-color-scheme: dark`.
+
+---
+
+### Accessibility
+
+- Disables transitions/animations for users with reduced motion enabled.
+- Increases border thickness for high-contrast mode.
+- Print styles invert to black/white for clarity.
+
+---
+
+## text.css - Classical Professional Typography Framework
+
+### Overview
+
+- Provides a complete, historically-inspired typography system.
+- Includes color and gradient palettes, heading/body/list styles, font families, scale, animation, and layout utilities.
+
+### Custom Properties (CSS Variables)
+
+#### Color Palette
+
+- Museum-grade text colors: `--text-gold-primary`, `--text-gold-secondary`, `--text-gold-accent`, `--text-velvet-primary`, `--text-velvet-secondary`, `--text-parchment-primary`, `--text-parchment-secondary`, `--text-ink-primary`, `--text-ink-secondary`, `--text-ink-muted`
+- Gold, silver, bronze, and historical gradients for text.
+- Shadows for royal, golden, and embossed effects.
+
+#### Font Families
+
+- Classical serif, display, script, monospace, Latin, and illuminated fonts.
+
+#### Scale
+
+- XS to 9XL variables for fine-grained font sizing.
+
+#### Animation Timing
+
+- Same set of custom timing functions as input.css for matching animation feel.
+
+---
+
+### Main Classes
+
+#### Text Container
+
+- `.text-container-royal`: Main container for text blocks, with parchment background, deep borders, shadows, padding, and blurred background.
+
+#### Headings
+
+- `.h1-royal`, `.h2-royal`, `.h3-royal`, `.h4-royal`, `.h5-royal`, `.h6-royal`: Large, classical type, strong shadow, animated entrance. 
+- `.h1-royal` features an animated gold gradient underline.
+
+#### Body
+
+- `.p-royal`: Base paragraph style.
+- `.p-royal-lg`, `.p-royal-sm`: Large/small paragraph variants.
+- `.lead-royal`: Large, subtle, secondary-colored lead text.
+
+#### Text Variants
+
+- `.text-gold`, `.text-silver`, `.text-bronze`: Gold/silver/bronze gradient text, using `background-clip: text`.
+- `.text-embossed`: Embossed effect with gradient and shadow.
+- `.text-illuminated`: Blackletter/Unifraktur font, glowing gold.
+- `.text-script`: Script font, slightly larger.
+- `.text-monospace`: Monospaced font, subtle background and border.
+
+#### Historical Styles
+
+- `.text-egyptian`: Display font, gold gradient, "Eye of Horus" prefix.
+- `.text-greek`: Italic, gradient, Latin font.
+- `.text-roman`: Bold, deep red shadows, display font.
+- `.text-renaissance`: Script font, larger, gentle shadow.
+- `.text-baroque`: Illuminated font, gold glow.
+
+#### Sizing Utilities
+
+- `.text-xs` through `.text-9xl` set font size by scale.
+
+#### Text Style Utilities
+
+- `.text-italic`, `.text-underline` (with gold underline), `.text-uppercase`, `.text-lowercase`, `.text-capitalize`
+- `.text-center`, `.text-right`, `.text-left`, `.text-justify`
+
+#### Weight Utilities
+
+- `.text-thin`, `.text-light`, `.text-normal`, `.text-medium`, `.text-semibold`, `.text-bold`, `.text-extrabold`, `.text-black`
+
+#### Layout Utilities
+
+- `.text-columns-2`, `.text-columns-3`: Multi-column text with column rules.
+- `.text-indent`: 2rem indent first line.
+- `.text-dropcap`: Large illuminated drop cap for first letter.
+
+---
+
+### Lists
+
+- `.list-royal`: Unordered list, no native bullets, custom gold triangle marker.
+- `.list-item-royal`: List item with padding, font, gold marker.
+- `.list-royal-ordered`: Ordered list with gold gradient number markers.
+
+---
+
+### Animations
+
+- Keyframes for fade-in (`textEntrance`), animated underline, text glow, floating, and reveal.
+- `.text-animate-glow`: Animated shadow/glow.
+- `.text-animate-float`: Floating effect.
+- `.text-animate-reveal`: Reveal animation using `clip-path`.
+- `.text-animate-stagger`: Staggered entrance for children.
+
+---
+
+  
 
 ---
 
