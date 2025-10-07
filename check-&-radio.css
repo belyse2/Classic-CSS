@@ -1,0 +1,836 @@
+/* check-&-radio.css - ULTRA MASTERPIECE Classical Professional Checkbox & Radio Framework */
+/* Version 13.0 - Supreme Excellence in Classical Selection Design */
+
+:root {
+  /* 🏺 ANTIQUE COLOR PALETTE - Museum Grade Selection Colors */
+  --check-bg-royal-parchment: #fefaf0;
+  --check-bg-imperial-ivory: #fffaf0;
+  --check-bg-gilded-velvet: #2a1810;
+  --check-bg-carrara-marble: #f8f4f0;
+  --check-bg-vermeil-gold: #fff8e8;
+  --check-bg-sterling-silver: #fafbfc;
+  --check-bg-patina-bronze: #f5f0e8;
+  --check-bg-illuminated: #fffef7;
+  
+  /* 👑 ROYAL SELECTION COLORS - Palace Quality Gradients */
+  --check-accent-gold: 
+    linear-gradient(135deg,
+      #d4af37 0%,
+      #f9e076 15%,
+      #ffdf00 30%,
+      #daa520 45%,
+      #b8860b 60%,
+      #daa520 75%,
+      #ffdf00 90%,
+      #f9e076 100%);
+  
+  --check-accent-silver: 
+    linear-gradient(135deg,
+      #c0c0c0 0%,
+      #e8e8e8 15%,
+      #f0f0f0 30%,
+      #d8d8d8 45%,
+      #a9a9a9 60%,
+      #d8d8d8 75%,
+      #f0f0f0 90%,
+      #e8e8e8 100%);
+  
+  --check-accent-bronze: 
+    linear-gradient(135deg,
+      #cd7f32 0%,
+      #e39d55 15%,
+      #f0b27a 30%,
+      #d18a4a 45%,
+      #a8662c 60%,
+      #d18a4a 75%,
+      #f0b27a 90%,
+      #e39d55 100%);
+
+  /* 🏛️ HISTORICAL ERA SELECTIONS */
+  --check-egyptian: 
+    linear-gradient(135deg,
+      #ffd700 0%,
+      #daa520 25%,
+      #b8860b 50%,
+      #8b6914 75%,
+      #b8860b 100%);
+  
+  --check-greek: 
+    linear-gradient(135deg,
+      #f5f5dc 0%,
+      #e6e6fa 25%,
+      #dda0dd 50%,
+      #e6e6fa 75%,
+      #f5f5dc 100%);
+  
+  --check-roman: 
+    linear-gradient(135deg,
+      #8b0000 0%,
+      #a52a2a 25%,
+      #b22222 50%,
+      #a52a2a 75%,
+      #8b0000 100%);
+  
+  --check-medieval: 
+    linear-gradient(135deg,
+      #2f4f4f 0%,
+      #556b2f 25%,
+      #6b8e23 50%,
+      #556b2f 75%,
+      #2f4f4f 100%);
+  
+  --check-renaissance: 
+    linear-gradient(135deg,
+      #8b4513 0%,
+      #a0522d 20%,
+      #b8860b 40%,
+      #daa520 60%,
+      #cd853f 80%,
+      #daa520 100%);
+  
+  --check-baroque: 
+    linear-gradient(135deg,
+      #2c1810 0%,
+      #4a3526 20%,
+      #654321 40%,
+      #8b4513 60%,
+      #a0522d 80%,
+      #8b4513 100%);
+
+  /* 🏰 ARCHITECTURAL SHADOWS */
+  --check-shadow-palace: 
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    0 16px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  
+  --check-shadow-cathedral: 
+    0 6px 20px rgba(0, 0, 0, 0.18),
+    0 12px 28px rgba(0, 0, 0, 0.15),
+    0 24px 48px rgba(0, 0, 0, 0.12),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  
+  --check-shadow-golden: 
+    0 0 20px rgba(212, 175, 55, 0.4),
+    0 0 40px rgba(212, 175, 55, 0.3),
+    0 0 60px rgba(212, 175, 55, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.15);
+
+  /* 🖋️ CALLIGRAPHY TYPOGRAPHY */
+  --check-font-palace: 'Palatino Linotype', 'Book Antiqua', serif;
+  --check-font-royal: 'Garamond', 'Times New Roman', serif;
+  --check-font-illuminated: 'Trajan Pro', 'Charlemagne', serif;
+  --check-font-manuscript: 'Apple Chancery', 'Zapfino', cursive;
+  --check-font-latin: 'Latin Modern Roman', serif;
+
+  /* 🎭 IMPERIAL ANIMATIONS */
+  --ease-royal: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-crown: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-throne: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-scepter: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-orb: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-coronation: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 👑 IMPERIAL SELECTION CONTAINER */
+.check-container-royal {
+  position: relative;
+  background: var(--check-bg-royal-parchment);
+  border: 3px double #8b4513;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--check-shadow-palace);
+  font-family: var(--check-font-royal);
+  backdrop-filter: blur(10px);
+  margin: 3rem 0;
+  background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" opacity="0.02"><defs><pattern id="royalPattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="%238b4513"/><circle cx="95" cy="45" r="2" fill="%238b4513"/><circle cx="45" cy="95" r="2" fill="%238b4513"/></pattern></defs><rect width="120" height="120" fill="url(%23royalPattern)"/></svg>');
+  overflow: hidden;
+}
+
+.check-container-royal::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.check-container-royal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 🏆 CROWN JEWEL CHECKBOX BASE */
+.check-royal {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check-label-royal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.4s var(--ease-coronation);
+  position: relative;
+  background: 
+    linear-gradient(135deg, rgba(254, 250, 240, 0.8) 0%, rgba(255, 248, 232, 0.6) 100%);
+  border: 2px solid transparent;
+  animation: checkEntrance 0.6s var(--ease-throne);
+}
+
+.check-label-royal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.9) 0%, 
+      rgba(255, 255, 255, 0.6) 50%, 
+      rgba(255, 255, 255, 0.9) 100%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-scepter);
+}
+
+.check-label-royal:hover::before {
+  opacity: 1;
+}
+
+.check-label-royal:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--check-shadow-cathedral);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* 🎨 ROYAL CHECKBOX DESIGN */
+.check-box-royal {
+  width: 24px;
+  height: 24px;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%);
+  border: 2px solid #8b4513;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.4s var(--ease-coronation);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.check-box-royal::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.check-royal:checked + .check-label-royal .check-box-royal {
+  background: var(--check-accent-gold);
+  border-color: #d4af37;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(212, 175, 55, 0.3);
+  animation: checkPulse 0.6s var(--ease-crown);
+}
+
+.check-royal:checked + .check-label-royal .check-box-royal::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2c1810;
+  font-weight: 900;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  animation: checkMarkAppear 0.3s var(--ease-scepter);
+}
+
+/* 🎨 ROYAL RADIO DESIGN */
+.radio-royal {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-label-royal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.4s var(--ease-coronation);
+  position: relative;
+  background: 
+    linear-gradient(135deg, rgba(254, 250, 240, 0.8) 0%, rgba(255, 248, 232, 0.6) 100%);
+  border: 2px solid transparent;
+  animation: radioEntrance 0.6s var(--ease-throne);
+}
+
+.radio-dot-royal {
+  width: 24px;
+  height: 24px;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%);
+  border: 2px solid #8b4513;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.4s var(--ease-coronation);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.radio-dot-royal::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.radio-royal:checked + .radio-label-royal .radio-dot-royal {
+  background: var(--check-accent-gold);
+  border-color: #d4af37;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(212, 175, 55, 0.3);
+  animation: radioPulse 0.6s var(--ease-crown);
+}
+
+.radio-royal:checked + .radio-label-royal .radio-dot-royal::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #2c1810;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  animation: radioDotAppear 0.3s var(--ease-scepter);
+}
+
+/* 🏛️ HISTORICAL ERA SELECTIONS */
+/* Egyptian Style */
+.check-egyptian .check-box-royal,
+.radio-egyptian .radio-dot-royal {
+  border: 3px solid #daa520;
+  background: 
+    linear-gradient(135deg, #fffaf0 0%, #ffe4b5 100%);
+}
+
+.check-egyptian:checked + .check-label-royal .check-box-royal,
+.radio-egyptian:checked + .radio-label-royal .radio-dot-royal {
+  background: var(--check-egyptian);
+  border-color: #ffd700;
+}
+
+/* Greek Style */
+.check-greek .check-box-royal,
+.radio-greek .radio-dot-royal {
+  border: 2px solid #4b0082;
+  background: 
+    linear-gradient(135deg, #f8f8ff 0%, #e6e6fa 100%);
+}
+
+.check-greek:checked + .check-label-royal .check-box-royal,
+.radio-greek:checked + .radio-label-royal .radio-dot-royal {
+  background: var(--check-greek);
+  border-color: #6a5acd;
+}
+
+/* Roman Style */
+.check-roman .check-box-royal,
+.radio-roman .radio-dot-royal {
+  border: 3px solid #8b0000;
+  background: 
+    linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+}
+
+.check-roman:checked + .check-label-royal .check-box-royal,
+.radio-roman:checked + .radio-label-royal .radio-dot-royal {
+  background: var(--check-roman);
+  border-color: #b22222;
+}
+
+/* Renaissance Style */
+.check-renaissance .check-box-royal,
+.radio-renaissance .radio-dot-royal {
+  border: 3px solid #8b4513;
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #f5f5dc 100%);
+}
+
+.check-renaissance:checked + .check-label-royal .check-box-royal,
+.radio-renaissance:checked + .radio-label-royal .radio-dot-royal {
+  background: var(--check-renaissance);
+  border-color: #a0522d;
+}
+
+/* 📐 ROYAL SELECTION SIZES */
+.check-royal-sm .check-box-royal,
+.radio-royal-sm .radio-dot-royal {
+  width: 18px;
+  height: 18px;
+}
+
+.check-royal-sm .check-box-royal::after {
+  font-size: 10px;
+}
+
+.check-royal-sm .radio-dot-royal::after {
+  width: 6px;
+  height: 6px;
+}
+
+.check-royal-lg .check-box-royal,
+.radio-royal-lg .radio-dot-royal {
+  width: 32px;
+  height: 32px;
+}
+
+.check-royal-lg .check-box-royal::after {
+  font-size: 18px;
+}
+
+.check-royal-lg .radio-dot-royal::after {
+  width: 14px;
+  height: 14px;
+}
+
+.check-royal-xl .check-box-royal,
+.radio-royal-xl .radio-dot-royal {
+  width: 40px;
+  height: 40px;
+}
+
+.check-royal-xl .check-box-royal::after {
+  font-size: 22px;
+}
+
+.check-royal-xl .radio-dot-royal::after {
+  width: 18px;
+  height: 18px;
+}
+
+/* 🎪 ROYAL SELECTION VARIANTS */
+/* Outline Variant */
+.check-royal-outline .check-label-royal,
+.radio-royal-outline .radio-label-royal {
+  background: transparent;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+}
+
+.check-royal-outline .check-box-royal,
+.radio-royal-outline .radio-dot-royal {
+  background: transparent;
+}
+
+/* Ghost Variant */
+.check-royal-ghost .check-label-royal,
+.radio-royal-ghost .radio-label-royal {
+  background: rgba(139, 69, 19, 0.05);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Filled Variant */
+.check-royal-filled .check-label-royal,
+.radio-royal-filled .radio-label-royal {
+  background: 
+    linear-gradient(135deg, #fefaf0 0%, #fff8e8 100%);
+  border: 2px solid #8b4513;
+  box-shadow: var(--check-shadow-palace);
+}
+
+/* 🏆 ROYAL SELECTION WITH ICONS */
+.check-with-icon-royal,
+.radio-with-icon-royal {
+  position: relative;
+  padding-left: 4rem;
+}
+
+.check-icon-royal,
+.radio-icon-royal {
+  position: absolute;
+  left: 1.5rem;
+  width: 24px;
+  height: 24px;
+  color: #8b4513;
+  transition: all 0.3s var(--ease-scepter);
+}
+
+.check-royal:checked + .check-label-royal .check-icon-royal,
+.radio-royal:checked + .radio-label-royal .radio-icon-royal {
+  color: #d4af37;
+  transform: scale(1.1);
+  animation: iconPulse 1s var(--ease-crown) infinite;
+}
+
+/* 🎭 ROYAL SELECTION ANIMATIONS */
+@keyframes checkEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.95);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes radioEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes checkPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 6px 16px rgba(212, 175, 55, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@keyframes radioPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 6px 16px rgba(212, 175, 55, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@keyframes checkMarkAppear {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes radioDotAppear {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes selectionGlow {
+  0%, 100% {
+    box-shadow: var(--check-shadow-palace);
+  }
+  50% {
+    box-shadow: var(--check-shadow-golden);
+  }
+}
+
+/* 🎪 ANIMATION CLASSES */
+.check-animate-glow .check-label-royal,
+.radio-animate-glow .radio-label-royal {
+  animation: checkEntrance 0.6s var(--ease-throne), selectionGlow 2s var(--ease-royal) infinite;
+}
+
+.check-animate-float .check-label-royal,
+.radio-animate-float .radio-label-royal {
+  transition: all 0.4s var(--ease-throne);
+}
+
+.check-animate-float .check-label-royal:hover,
+.radio-animate-float .radio-label-royal:hover {
+  transform: translateY(-3px);
+}
+
+.check-animate-stagger > *,
+.radio-animate-stagger > * {
+  animation: checkEntrance 0.6s var(--ease-throne) forwards;
+  opacity: 0;
+}
+
+.check-animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.check-animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.check-animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.check-animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.check-animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* 📊 ROYAL SELECTION GROUPS */
+.check-group-royal,
+.radio-group-royal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.check-group-horizontal,
+.radio-group-horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.check-group-grid,
+.radio-group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* 📱 RESPONSIVE ROYAL SELECTIONS */
+@media (max-width: 1200px) {
+  .check-container-royal {
+    padding: 2.5rem;
+  }
+  
+  .check-group-grid,
+  .radio-group-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .check-container-royal {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .check-label-royal,
+  .radio-label-royal {
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .check-group-horizontal,
+  .radio-group-horizontal {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .check-group-grid,
+  .radio-group-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .check-with-icon-royal,
+  .radio-with-icon-royal {
+    padding-left: 3.5rem;
+  }
+  
+  .check-icon-royal,
+  .radio-icon-royal {
+    left: 1.25rem;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .check-container-royal {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .check-label-royal,
+  .radio-label-royal {
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+  }
+  
+  .check-box-royal,
+  .radio-dot-royal {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .check-box-royal::after {
+    font-size: 12px;
+  }
+  
+  .radio-dot-royal::after {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* 🌙 ROYAL DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .check-container-royal {
+    background: #1a1208;
+    color: #f8f4e9;
+  }
+  
+  .check-label-royal,
+  .radio-label-royal {
+    background: 
+      linear-gradient(135deg, rgba(42, 31, 16, 0.8) 0%, rgba(26, 18, 8, 0.6) 100%);
+    color: #f8f4e9;
+  }
+  
+  .check-box-royal,
+  .radio-dot-royal {
+    background: 
+      linear-gradient(135deg, #2a1f10 0%, #1a1208 100%);
+    border-color: #5d4037;
+  }
+  
+  .check-royal-outline .check-label-royal,
+  .radio-royal-outline .radio-label-royal {
+    background: transparent;
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+  
+  .check-royal-ghost .check-label-royal,
+  .radio-royal-ghost .radio-label-royal {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.2);
+  }
+}
+
+/* ♿ ROYAL ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .check-label-royal,
+  .radio-label-royal,
+  .check-box-royal,
+  .radio-dot-royal,
+  .check-icon-royal,
+  .radio-icon-royal {
+    transition: none;
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .check-box-royal,
+  .radio-dot-royal {
+    border-width: 3px;
+  }
+  
+  .check-label-royal,
+  .radio-label-royal {
+    border-width: 2px;
+  }
+}
+
+/* 👑 PRINT PERFECTION */
+@media print {
+  .check-container-royal {
+    background: white !important;
+    color: black !important;
+    border: 3px double black !important;
+    box-shadow: none !important;
+  }
+  
+  .check-box-royal,
+  .radio-dot-royal {
+    background: white !important;
+    border: 2px solid black !important;
+    box-shadow: none !important;
+  }
+  
+  .check-royal:checked + .check-label-royal .check-box-royal::after {
+    color: black !important;
+  }
+  
+  .radio-royal:checked + .radio-label-royal .radio-dot-royal::after {
+    background: black !important;
+  }
+}
