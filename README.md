@@ -1,3 +1,5 @@
+<center> <img src="logos.png"></center>
+
 # Classic CSS Framework Documentation
 
 This documentation provides a comprehensive and deeply detailed explanation of the **Classic CSS Framework** and its components based on the provided source code. The framework is a masterpiece collection of ultra-professional, classical CSS modules, each tailored for supreme design excellence and modern usability across UI elements.
