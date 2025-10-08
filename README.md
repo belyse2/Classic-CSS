@@ -1,3 +1,156 @@
+<!--
+  CLASSIC CSS FRAMEWORK: ROYAL LIVE DASHBOARD
+  All badges are live & auto-updating via Shields.io & GitHub Readme Stats.
+  All components are for THIS REPOSITORY ONLY.
+-->
+
+<p align="center">
+  <img src="logos.png" width="220" alt="Classic CSS Logo" style="border-radius:16px;box-shadow:0 6px 32px #D4AF3740;">
+</p>
+
+<h1 align="center" style="font-family:'Playfair Display',serif;font-weight:bold;color:#2C1810;font-size:2.8rem;">
+  <span style="color:#D4AF37;">Classic CSS</span> <span style="font-size:2.2rem;">Royal Stats & Achievements</span>
+</h1>
+
+<p align="center" style="font-size:1.17rem;color:#6a4c21;">
+  <b>Live, auto-updating repository dashboard—celebrating code, community, and classical design.</b>
+</p>
+
+---
+
+## ✨ Golden Snapshot (Live Badges)
+
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/wecoded-dev/Classic-CSS?style=for-the-badge&label=Latest%20Release&color=FFD700&labelColor=2C1810" alt="Latest Release"/>
+  <img src="https://img.shields.io/github/license/wecoded-dev/Classic-CSS?style=for-the-badge&color=blueviolet&labelColor=2C1810" alt="MIT License"/>
+  <img src="https://img.shields.io/github/stars/wecoded-dev/Classic-CSS?style=for-the-badge&label=Stars&color=gold&logo=star&labelColor=2C1810" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/wecoded-dev/Classic-CSS?style=for-the-badge&label=Forks&color=goldenrod&logo=git&labelColor=2C1810" alt="Forks"/>
+  <img src="https://img.shields.io/github/issues/wecoded-dev/Classic-CSS?style=for-the-badge&label=Issues&color=slateblue&logo=github&labelColor=2C1810" alt="Issues"/>
+  <img src="https://img.shields.io/github/contributors/wecoded-dev/Classic-CSS?style=for-the-badge&label=Contributors&color=royalblue&labelColor=2C1810" alt="Contributors"/>
+  <img src="https://img.shields.io/github/commit-activity/m/wecoded-dev/Classic-CSS?style=for-the-badge&label=Monthly%20Commits&color=mediumorchid&labelColor=2C1810" alt="Monthly Commits"/>
+  <img src="https://img.shields.io/github/last-commit/wecoded-dev/Classic-CSS?style=for-the-badge&color=deeppink&label=Last%20Commit&labelColor=2C1810" alt="Last Commit"/>
+  <img src="https://img.shields.io/github/repo-size/wecoded-dev/Classic-CSS?style=for-the-badge&color=chocolate&labelColor=2C1810" alt="Repo Size"/>
+  <img src="https://img.shields.io/github/languages/top/wecoded-dev/Classic-CSS?style=for-the-badge&label=Top%20Language&color=orange&labelColor=2C1810" alt="Top Language"/>
+  <img src="https://img.shields.io/github/languages/count/wecoded-dev/Classic-CSS?style=for-the-badge&label=Languages&color=red&labelColor=2C1810" alt="Languages"/>
+</p>
+
+---
+
+## 💎 Royal Achievements
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Responsive-100%25-32B67A?style=for-the-badge" alt="Responsive"/>
+  <img src="https://img.shields.io/badge/Accessibility-AA%2B-FFD700?style=for-the-badge" alt="Accessibility"/>
+  <img src="https://img.shields.io/badge/Animations-20%2B%20Effects-ff69b4?style=for-the-badge" alt="Animations"/>
+  <img src="https://img.shields.io/badge/Print%20Perfect-Ready-6a5acd?style=for-the-badge" alt="Print Perfect"/>
+  <img src="https://img.shields.io/badge/Historical-5%2B%20Themes-8B4513?style=for-the-badge" alt="Historical Themes"/>
+  <img src="https://img.shields.io/badge/Modern%20CSS-Masterpiece-DAA520?style=for-the-badge" alt="Modern CSS"/>
+  <img src="https://img.shields.io/badge/Bootstrap5-Compatible-563d7c?style=for-the-badge" alt="Bootstrap5 Compatible"/>
+</p>
+
+---
+
+## 🏆 Royal Dashboard Panels
+
+<!-- Stats Panels: These cards are visually beautiful on GitHub and always live! -->
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=wecoded-dev&repo=Classic-CSS&theme=calm&border_color=D4AF37&bg_color=2C1810&title_color=FFD700&text_color=F8F4E9" alt="Classic CSS GitHub Repo Card" />
+
+
+</div>
+
+---
+
+## 🏛️ Classical Stats Table
+
+<table align="center" width="99%" style="max-width:690px;border:2px solid #D4AF37;background:#f8f4e9;color:#2c1810;border-radius:16px;box-shadow:0 2px 16px 0 #d4af3722;font-size:1.06em;">
+  <tr>
+    <th align="left">Stat</th>
+    <th align="left">Live Badge</th>
+    <th align="left">Description</th>
+  </tr>
+  <tr>
+    <td><b>⭐ Stars</b></td>
+    <td><img src="https://img.shields.io/github/stars/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Stars"/></td>
+    <td>Number of users who starred this repository</td>
+  </tr>
+  <tr>
+    <td><b>🍴 Forks</b></td>
+    <td><img src="https://img.shields.io/github/forks/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Forks"/></td>
+    <td>Times this repo was forked</td>
+  </tr>
+  <tr>
+    <td><b>🐞 Open Issues</b></td>
+    <td><img src="https://img.shields.io/github/issues/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Open Issues"/></td>
+    <td>Active issues for improvement or bug fixes</td>
+  </tr>
+  <tr>
+    <td><b>👥 Contributors</b></td>
+    <td><img src="https://img.shields.io/github/contributors/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Contributors"/></td>
+    <td>People who contributed code</td>
+  </tr>
+  <tr>
+    <td><b>🕒 Last Commit</b></td>
+    <td><img src="https://img.shields.io/github/last-commit/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Last Commit"/></td>
+    <td>Most recent update</td>
+  </tr>
+  <tr>
+    <td><b>📦 Repo Size</b></td>
+    <td><img src="https://img.shields.io/github/repo-size/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Repo Size"/></td>
+    <td>Total repository size</td>
+  </tr>
+  <tr>
+    <td><b>📝 License</b></td>
+    <td><img src="https://img.shields.io/badge/License-MIT-blueviolet?style=flat-square" alt="MIT License"/></td>
+    <td>MIT open source license</td>
+  </tr>
+  <tr>
+    <td><b>💎 Top Language</b></td>
+    <td><img src="https://img.shields.io/github/languages/top/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Top Language"/></td>
+    <td>Primary programming language</td>
+  </tr>
+</table>
+
+---
+
+## 🏹 Classical Milestones
+
+- **Created:** 2025-10-06
+- **Current Version:** <img src="https://img.shields.io/github/v/release/wecoded-dev/Classic-CSS?style=flat-square&color=gold" alt="Release"/>
+- **Main Language:** <img src="https://img.shields.io/github/languages/top/wecoded-dev/Classic-CSS?style=flat-square&color=FFD700" alt="Top Language"/>
+- **Owner:** [@wecoded-dev](https://github.com/wecoded-dev)
+- **License:** <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=flat-square" alt="MIT License"/>
+
+---
+
+<p align="center" style="font-size:1.11rem;">
+  <b>Made with <span style="color:#FFD700;">&#x1F451; Royal CSS</span> & <span style="color:#2C1810;">Classical Inspiration</span></b>
+</p>
+
+<!--
+NOTES:
+- All badges and stats are LIVE and update automatically (no manual updates needed).
+- For maximum beauty: Use this block at the top or in its own STATS.md page.
+- Shields.io, GitHub Readme Stats, and Streak Stats all work on GitHub Markdown.
+- <div> and <table> alignment/CSS is for local/preview only, but badges always look beautiful on GitHub.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <center> <img src="logos.png"></center>
 
 # Classic CSS Framework Documentation
