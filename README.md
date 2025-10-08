@@ -189,6 +189,28 @@ This documentation provides a comprehensive and deeply detailed explanation of t
 
 Classic CSS is a modular CSS framework bringing classical elegance and modern power to web UI design. It incorporates historical art, architectural inspiration, and legacy color palettes for cards, buttons, forms, tables, progress bars, alerts, badges, sliders, and testimonials, each featuring advanced gradients, shadows, typography, and responsive design.
 
+## Installation 
+
+```
+<!-- Main CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/Classic.css">
+
+<!-- Components -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/alerts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/badges.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/buttons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/cards.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/check-&-radio.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/forms.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/input.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/progress.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/sliders.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/tables.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/testimonials.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wecoded-dev/Classic-CSS/text.css">
+
+```
+
 ---
 
 ## Core Principles
