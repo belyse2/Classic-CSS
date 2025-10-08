@@ -1,3 +1,4 @@
+<center><img src="logos.png"></center><br>
 # ✨ Contributing to Classic CSS Framework ✨
 
 Thank you for your interest in contributing to the **Classic CSS Framework** — the ultra masterpiece of classical, historical, and professional design!  
